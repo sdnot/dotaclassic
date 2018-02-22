@@ -1,0 +1,3535 @@
+.bracket {
+    font-size: 11px;
+    color: #000;
+    background: transparent;
+    display: table;
+    -webkit-transform-origin: left top 0px;
+    transform-origin: left top 0px
+}
+
+.bracket * {
+    box-sizing: content-box
+}
+
+.bracket-wrapper {
+    min-height: 0.01%;
+    pointer-events: auto;
+    padding-bottom: 15px
+}
+
+.bracket-scroller {
+    pointer-events: none
+}
+
+.bracket-scroller * {
+    pointer-events: auto
+}
+
+.bracket-column {
+    float: left;
+    position: relative
+}
+
+.bracket-column-matches {
+    width: 190px;
+}
+
+.bracket-column-separator {
+    width: 20px;
+}
+
+.bracket-column-separator > div {
+    float: left;
+    width: 9px;
+}
+
+.bracket-column-separator > div > div {
+    width: 9px;
+}
+
+.bracket-header {
+    border-radius: 2px;
+    border: 1px solid #aaa;
+    padding: 2px 0 2px 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    line-height: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: #ebebeb
+}
+
+.bracket-header-wrapper {
+    height: 40px;
+    margin-top: 0px;
+}
+
+.bracket-cell-r1 {
+    pointer-events: none;
+    height: 36px
+}
+
+.bracket-cell-r2 {
+    pointer-events: none;
+    height: 72px
+}
+
+.bracket-cell-r3 {
+    pointer-events: none;
+    height: 144px
+}
+
+.bracket-cell-r4 {
+    pointer-events: none;
+    height: 288px
+}
+
+.bracket-cell-r5 {
+    pointer-events: none;
+    height: 576px
+}
+
+.bracket-cell-r6 {
+    pointer-events: none;
+    height: 1152px
+}
+
+.bracket-cell-r7 {
+    pointer-events: none;
+    height: 2304px
+}
+
+.bracket-cell-r1,.bracket-cell-r2,.bracket-cell-r3,.bracket-cell-r4,.bracket-cell-r5,.bracket-cell-r6,.bracket-cell-r7 {
+    position: relative
+}
+
+.bracket-team-top,.bracket-team-bottom,.bracket-player-top,.bracket-player-bottom,.bracket-team-middle,.bracket-player-middle,.bracket-team-inner,.bracket-player-inner {
+    border-radius: 0 0 2px 2px;
+    border: solid #aaa 1px;
+    position: absolute;
+    padding: 1px;
+    min-height: 20px;
+    line-height: 18px;
+    background: #f2f2f2;
+    left: 0;
+    right: 0
+}
+
+.winner {
+  background: #f2f2f2;
+  background: -moz-linear-gradient(left,  #f2f2f2 0%, #f2f2f2 65%, #ddc32c 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f2f2f2), color-stop(65%,#f2f2f2), color-stop(100%,#ddc32c));
+  background: -webkit-linear-gradient(left,  #f2f2f2 0%,#f2f2f2 65%,#ddc32c 100%);
+  background: -o-linear-gradient(left,  #f2f2f2 0%,#f2f2f2 65%,#ddc32c 100%);
+  background: -ms-linear-gradient(left,  #f2f2f2 0%,#f2f2f2 65%,#ddc32c 100%);
+  background: linear-gradient(to right,  #f2f2f2 0%,#f2f2f2 65%,#ddc32c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ddc32c',GradientType=1 );
+}
+
+
+.bracket-team-top,.bracket-player-top {
+    bottom: 0;
+    border-radius: 2px 2px 0 0
+}
+
+.bracket-4ffa .bracket-team-bottom,.bracket-4ffa .bracket-player-bottom {
+    top: 24px
+}
+
+.bracket-4ffa .bracket-team-top,.bracket-4ffa .bracket-player-top {
+    bottom: 24px
+}
+
+.bracket-team-middle,.bracket-player-middle {
+    bottom: 0;
+    border-radius: 2px
+}
+
+.bracket-team-inner,.bracket-player-inner {
+    border-radius: 0
+}
+
+.bracket-team-top + .bracket-team-inner,.bracket-player-top + .bracket-player-inner {
+    bottom: 0
+}
+
+.bracket-team-top,.bracket-team-bottom,.bracket-team-middle {
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.bracket-score {
+    width: 21px;
+    text-align: center;
+    background: #ebebeb;
+    border-left: 1px solid #aaa;
+    position: absolute;
+    line-height: 22px;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+.bracket-team-bottom .bracket-score,.bracket-player-bottom .bracket-score {
+    border-bottom-right-radius: 2px
+}
+
+.bracket-team-top .bracket-score,.bracket-player-bottom .bracket-score {
+    border-top-right-radius: 2px
+}
+
+.bracket-team-middle .bracket-score,.bracket-player-middle .bracket-score {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px
+}
+
+.bracket-hover {
+    -moz-box-shadow: 0 0 2px #000;
+    -webkit-box-shadow: 0 0 2px #000;
+    box-shadow: 0 0 2px #000;
+    border: 1px solid #000 !important
+}
+
+.match-row,.bracket-hover,.grouptableslot,.matchlistslot,.bracket-team-top,.bracket-team-bottom,.bracket-team-middle,.bracket-team-inner,.bracket-player-top,.bracket-player-bottom,.bracket-player-middle,.bracket-player-inner {
+    transition: .5s
+}
+
+.bracket-popup-title {
+    display: table-row;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 2px 5px
+}
+
+.bracket-popup-title-left {
+    display: table-cell;
+    text-align: right;
+    width: 50%;
+    padding: 2px;
+    border-bottom: 1px solid #aaa
+}
+
+.bracket-popup-title-right {
+    display: table-cell;
+    text-align: left;
+    width: 50%;
+    padding: 2px;
+    border-bottom: 1px solid #aaa
+}
+
+.bracket-icons {
+    border-top: 1px solid #aaa
+}
+
+.bracket-game {
+    position: relative;
+    cursor: pointer
+}
+
+.bracket-game-status {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 48px;
+    top: -24px;
+    opacity: 0.4;
+    transition: .5s
+}
+
+.bracket-game .icon,.match-row-icon {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA0FJREFUeNrMWF1IU2EYPvvcv0s3baVTJuRwk+ZhRYjZLkSvvPGiLqOLunBCBUndGHhReBNUGESw7CoiuhWki7rSxFzDYWPmmArNwRgbTJ3ZNvfX8wnKkuXOybmdBwY7P993Ht73Oe/7vEc0ODjI8EFnZ+eVUCg0tLm5eTkej59Np9PKXC4notdEIlFOLBbHFQpFRK1Wf9PpdG/m5+c/89lfxJEQMRgMY4FAYCiZTGr4PEAmk201Nze/XVtbu4fDbNEHFbuBZdn7Eolka3V1dYQvGQqsqQWZu4jcttlsHj0OIVldXd2C2+1+mkqlVMwxQVPr8XgeazQaLw7lvAg1NjaekcvloWg0epEpMTY2NoyIeKSnp8fIlZA2Eon4E4mEmjkh0IjPzMx4uru7DYeviQ8dSyHCFeRdzmVju91e8LzNZiu6NpvNip1O53f8PY1fvGCEtFqtg4qQKRMQKSU05SmYsvb29jtIlYUpM6Cpcx0dHY8OEyJ4NZ8wFcLy8vLIvnz2CLW2to7u7u4qK0UIJUGCwvvygFAwGBxmKoz19fWbe61jYmLiEtTuZAQAq9V6lYTD4WFGIPD7/bcJunaXUAihM7BiaiH4LPpXMeRbGAsB3aGWoDgphBIhVG8J2TdXQgDlIua7KD8dXNLHF4TaTqFEiHIhcHIJoRAihKQIDHlYKIRgCmME7X9BKIQwqfwgDQ0NL4RCqKWlxU4cDscXhOpXpcnAZ6fm5ube73X7pqamV5UmpNfrPxzYD5izETBMVopMVVVVBhxu5Zv8rNFofIi56Vkpeln+PVz6mslkGl9aWkr/5alB5jkGQ1+5o1NTUxMEmQcFpw60/wtSqXSnjKlK1dfXm46ay35j/jYvLi76aOctpbUo0Cay/f39XVNTU9tHTq4ul+snJsrzEPnOCUYmOTAwYAUZF6fZfnZ2dgU+SXsSmoJmAvDOusnJya98v37EoSmjxWIZK0UDpnphWXY8Fovpp6eno//9fQh6GsXcpMKr+RqC513Rkfp4W1vbu0wmo3S73UUHCsJx34zX67VhmDzV29t7DT3no0qlCtLPd1Sc+UJFJBLV1dUhVN5PfX191+n87vP5btB5kMuD/ggwADNjTAamIZvRAAAAAElFTkSuQmCC);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 50;
+    position: absolute;
+    image-rendering: -webkit-optimize-contrast
+}
+
+.bracket-game .icon {
+    right: 16px
+}
+
+.match-row-icon {
+    left: -11px;
+    top: 6px
+}
+
+.bracket-class-icon {
+    float: right;
+    width: 22px
+}
+
+.bracket-archon-mode .bracket-cell-r1 {
+    height: 54px
+}
+
+.bracket-archon-mode .bracket-cell-r2 {
+    height: 108px
+}
+
+.bracket-archon-mode .bracket-cell-r3 {
+    height: 216px
+}
+
+.bracket-archon-mode .bracket-cell-r4 {
+    height: 432px
+}
+
+.bracket-archon-mode .bracket-cell-r5 {
+    height: 864px
+}
+
+.bracket-archon-mode .bracket-cell-r6 {
+    height: 1728px
+}
+
+.bracket-archon-mode .bracket-cell-r7 {
+    height: 3456px
+}
+
+.bracket-archon-mode .bracket-player-bottom {
+    border-top-color: #888
+}
+
+.bracket-archon-mode .bracket-player-top {
+    border-bottom-color: #888
+}
+
+.bracket-archon-mode .bracket-score {
+    line-height: 40px;
+    font-size: 1.25em
+}
+
+.bracket-archon-mode .bracket-popup-title-container {
+    font-size: .85em
+}
+
+.bracket-popup-title .archon-race-icon {
+    line-height: 32px
+}
+
+.bracket-popup-title-left .archon-race-icon {
+    float: right;
+    margin-left: 5px
+}
+
+.bracket-popup-title-right .archon-race-icon {
+    float: left;
+    margin-right: 5px
+}
+
+.bracket-archon-mode .bracket-game .icon {
+    right: 33px
+}
+
+.bracket-doubles .bracket-cell-r1 {
+    height: 54px
+}
+
+.bracket-doubles .bracket-cell-r2 {
+    height: 108px
+}
+
+.bracket-doubles .bracket-cell-r3 {
+    height: 216px
+}
+
+.bracket-doubles .bracket-cell-r4 {
+    height: 432px
+}
+
+.bracket-doubles .bracket-cell-r5 {
+    height: 864px
+}
+
+.bracket-doubles .bracket-cell-r6 {
+    height: 1728px
+}
+
+.bracket-doubles .bracket-cell-r7 {
+    height: 3456px
+}
+
+.bracket-doubles .bracket-score {
+    line-height: 38px
+}
+
+.bracket-doubles .bracket-game .icon {
+    right: 33px
+}
+
+.bracket-class-icon {
+    float: right;
+    width: 20px
+}
+
+.bracket-game span.player-name {
+    display: inline-block;
+    height: 17px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 95%
+}
+
+.bracket-game a + span.player-name,.bracket-game img + span.player-name {
+    width: 80%
+}
+
+.matchlistslot a {
+    color: #000000;
+    text-decoration: none !important
+}
+
+.streamLink {
+    display: none
+}
+
+.hasStream,.hasStream:visited {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfgAQ4AFQVA8P06AAAHNElEQVRYw62Xy48c1RXGf+fcW9XjefSMBxvw+AGYh3mYyIJY2EEJirIAlEiW2CRSlLWlKGGXPyMrtuyyygYUkkUCSpTYGJMQ3g9jCBhDsDFjz+B59HRX3XtOFlXTPTM4kYJcUqlK3dV9vvoe59wrc4eeoD1uc+c4cCwE2ScwznU8HFZz9s+AZ0R4GjgHIC2ABxye6kQ5un0CmR5zgvj1rI+5cLUvLKzig+SnBX4JvCZzh564zeE34wUP75vNjGlFzgkcEOV6wBAMATRE+lby6WKgV3FK4GfR4XihfnSuW1N6RUpO1nGq4gayjiOi/w/N1/jQUO9TpgViWqaUzNxUyfnF4mhtcjwCxyaKpB0ZkM2pwgy9Yg9T3Vnu2ncz01PjmDvuvumdVEBUUFFUhRCUoEoISgyBEBQR4criEu+cPc+Vy122cYFOukxHBkyWoov94lgU2DsWKtwySToscyN753bxvYcOMtOdxMzJZmQzGgyOIIjIsHCMgSIEiiJSFoGyiJRFQVEERISHDt3J71/4O2+/VyOsUtgKY1ohFHuj4BPqNeZGjwm2TUzxyJH7md3epRrU1DmTUwPAhiBABESVoEIMoQFRJ6oiUhaZssx0UqQsC27aOcOxR4/wxfwVFj6fp+vLiNcIPhEdJ+eEmVC5cPetu9h5wwxVncjuWDZSzmTzlo3cytHIoKqEkIkpkGIgZSPnFnC2Vr6CHbNd7rjlZk6c/4BJgZwTjhNxSCljpmQzdmzvElTxVndrz9Xlq8xf+jfbd+4llh3cDARU1nXPpBya4rlhy6wBYOaIdNgxO43ljKmRUgaHSMuAeySnhHvzx9LaugECg7UlLp49xb/eMuZuf4Ab9x5ANQCZsMELORrJMmbrsjlujqqAO5YThjVRx4nukC1jFki5xt1RaUwm0uidszE3t4cf/PwXfPjBGU6cPMnr595hz52Hmdm5p5FBhZgyuTCSBSx74xlrmBQVBlVFSjWmRs4ZV4hNgdw+3DYMbaIlLRCAoEq32+XI0Yc5ePBbvPLKy/zt5Ck+/3iKPXcdZnL6BoJq64GAmY8kcEdFqaoab6XJOcM6AHfHW4evR6sBoUMmNChlWRKCMrN9O48+9kMefPAwJ078lRdffp4wuZu5/YeYmOq2sR0BcHdUlTplHB+yAhsAmBvQaBVDY6wQhNACCaqUnQ4xyDCKc7v38OOf/JQjR7/DC8//iX++9gembrqbXbfey/j4+AYAIKJUddPizW0rABqztEhjDE22QyCE3ICJgU7LwNbjwIF7uOOOO3nv3Xf43XPPcfYfz3Hz/ge5cff+BmzLbMMALQOMAIDjbnirdREDRQykFFowShEjnU7nmgAAiqLg24cf4r6D93P6pRf588lX6fXWmoKMJIAR25slMAdvJVgHUARSbu5jDIQYieF/D6fJySkef/xHzO6+h9/+8TX6/Wpo4jSUwK8lgeHrqNq+nrKRolHEJusp1bj9dwAqwtJqn5de/5gXX/+IldU+Y50SkcZLIxPatSTwtvs0fb6IgVwEcg6kHFFVBoOKoPL1eS+Nvm9/eJHnXzrD2XOXCKqMb+uACNImK+U8NOE1JADX0cgNQSmLSDYjZSMoVFVFkNHcFxHcnQvzy5x64xPe/OACXy312ghmBlUaJiiGQEq2wYRbJHAzfAu7MQZKK8jZCZKpqgEqIwaWehXvf3KFdz/6kstfraKijI+VqAipbW4pZeqUqOtmTqyb0F02S2Bu4P41assiYBYhG9WgQgTq5FxY6HPu4hKXF1cxh/Gxsmnd0vyuqlPT4HAse9MhzRoJbFRnUwqutaRSVcqyIFeZfjWgV8H81cTCcp9ssG2s3LL+E1QazZs3bkCtT9eRCfXrEmxlYIgyKBQlKwNnpUqYOGOdYvj4xuWayKidN2Pem8WLyHBB00igW1KA45a5cHF+hHzDEUIkltAxGY7o9SWat5XXC60brw65Xco1jWit1wO31sUbTdhwhHrFq2++x/e/e5hb9+3aBGQ9mt4pWGdtQx5o5R9mPqgSU2qd7/R6aywsLqC2Btjw3UN3132/8mqlLBgQSCwPlPmFFW67ZTfdqYl2GEl7KjHGZlq2+dbh97r5DELQgKqwttbnzJn3WbzyBWX9JVhFLRNIZ3Y1IvIpRfeeur9IqTVl9QVvvfkGv768wL0HbmfXTTsoy2LzUt+9jVemrptryu21vc/JqOqaq0vLXLr0JctfXaasLqK5R50MH5tGVD+NuD8rnZkDg8GChrxMYIWxwXnmP7nCX86/j2gEkW+wG1qXOhNsjU5eQa1PzpmBTCKdGcN5NgJPi8ZHdOqWh3vL5ynrZcqQKaUPCP4Nim8C0s5jd6fKzkCm0Kl9iMbT4E/HZpfqT0roPKXT+4/Wg6tS1yuIDRD8Ou2MBUIHLyfRzrSLxNPgTwLnZOP2HDiOyDGcfe42DtdrhyyI6CrCZ7g/A6Pt+X8ASY1yxknmoCYAAAAASUVORK5CYII=) center right no-repeat;
+    background-position: left;
+    padding-left: 15px;
+    background-size: 12px;
+    color: green;
+    font-weight: bold
+}
+
+.game-map-skipped {
+    text-decoration: line-through
+}
+
+.bracket-popup-mobile {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    margin: 0;
+    width: 100% !important;
+    border-radius: 0px !important;
+    border-left: 0 !important;
+    border-right: 0 !important
+}
+
+.bracket-popup-wrapper {
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    transform: translateZ(0);
+    z-index: 100;
+    font-weight: normal;
+    white-space: normal;
+    font-size: 12px
+}
+
+.bracket-popup-wrapper * {
+    box-sizing: border-box
+}
+
+.bracket-popup-wrapper p {
+    margin: 0;
+    padding: 0
+}
+
+.bracket-popup-wrapper .bracket-popup {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 2px
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-header {
+    background-color: #ebebeb;
+    border-bottom: 1px solid #dddddd
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-header .bracket-popup-header-left,.bracket-popup-wrapper .bracket-popup .bracket-popup-header .bracket-popup-header-right {
+    width: calc(50% - 2px);
+    padding: 5px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip
+}
+
+.bracket-popup-wrapper.bracket-popup-player .bracket-popup .bracket-popup-header .bracket-popup-header-left,.bracket-popup-wrapper.bracket-popup-player .bracket-popup .bracket-popup-header .bracket-popup-header-right {
+    height: 25px
+}
+
+.bracket-doubles .bracket-popup-wrapper.bracket-popup-player .bracket-popup .bracket-popup-header .bracket-popup-header-left,.bracket-doubles .bracket-popup-wrapper.bracket-popup-player .bracket-popup .bracket-popup-header .bracket-popup-header-right {
+    height: 40px
+}
+
+.bracket-popup-wrapper.bracket-popup-team .bracket-popup .bracket-popup-header .bracket-popup-header-left,.bracket-popup-wrapper.bracket-popup-team .bracket-popup .bracket-popup-header .bracket-popup-header-right {
+    height: 30px
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-header .bracket-popup-header-left {
+    text-align: right
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-header .bracket-popup-header-right {
+    text-align: left
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-header:after {
+    clear: both;
+    content: " ";
+    width: 100%;
+    display: block
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-match {
+    text-align: center;
+    padding: 2px 0;
+    vertical-align: initial
+}
+
+.wiki-leagueoflegends .bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-match {
+    min-height: 34px
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-match:after {
+    clear: both;
+    content: " ";
+    width: 100%;
+    display: block
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-match:nth-of-type(2n) {
+    background-color: #ebebeb
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-time {
+    border-bottom: 1px dotted #dddddd;
+    padding: 5px;
+    font-size: 85%;
+    line-height: 12.5px;
+    text-align: center
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-time:after {
+    clear: both;
+    content: " ";
+    width: 100%;
+    display: block
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-bans {
+    border-top: 1px dotted #dddddd;
+    font-weight: bold
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-bans:after {
+    clear: both;
+    content: " ";
+    width: 100%;
+    display: block
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-comment {
+    border-top: 1px dotted #dddddd;
+    padding: 5px;
+    font-size: 85%;
+    line-height: 12.5px;
+    text-align: center
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body .bracket-popup-body-comment:after {
+    clear: both;
+    content: " ";
+    width: 100%;
+    display: block
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-body:after {
+    clear: both;
+    content: " ";
+    width: 100%;
+    display: block
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 5px;
+    border-top: 1px solid #dddddd
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-footer:after {
+    clear: both;
+    content: " ";
+    width: 100%;
+    display: block
+}
+
+.bracket-popup-wrapper .bracket-popup .bracket-popup-footer img {
+    max-height: 16px;
+    max-width: 16px
+}
+
+.wiki-counterstrike .bracket-popup-wrapper.bracket-popup-player {
+    width: 330px
+}
+
+.wiki-counterstrike .bracket-popup-wrapper.bracket-popup-team {
+    width: 330px
+}
+
+.wiki-dota2 .bracket-popup-wrapper.bracket-popup-team {
+    width: 400px
+}
+
+.wiki-fighters .bracket-popup-wrapper.bracket-popup-player {
+    width: 300px
+}
+
+.wiki-fighters .bracket-popup-wrapper.bracket-popup-team {
+    width: 360px
+}
+
+.wiki-hearthstone .bracket-popup-wrapper.bracket-popup-player {
+    width: 200px
+}
+
+.wiki-heroes .bracket-popup-wrapper.bracket-popup-team {
+    width: 460px
+}
+
+.wiki-overwatch .bracket-popup-wrapper.bracket-popup-team {
+    width: 460px
+}
+
+.wiki-quake .bracket-popup-wrapper.bracket-popup-player {
+    width: 250px
+}
+
+.wiki-rainbowsix .bracket-popup-wrapper.bracket-popup-team {
+    width: 300px
+}
+
+.wiki-rocketleague .bracket-popup-wrapper.bracket-popup-team {
+    width: 330px
+}
+
+.wiki-smash .bracket-popup-wrapper.bracket-popup-player {
+    width: 320px
+}
+
+.wiki-starcraft .bracket-popup-wrapper.bracket-popup-player {
+    width: 250px
+}
+
+.wiki-starcraft2 .bracket-popup-wrapper.bracket-popup-player {
+    width: 250px
+}
+
+.wiki-starcraft2 .bracket-popup-wrapper.bracket-popup-team {
+    width: 400px
+}
+
+.wiki-teamfortress .bracket-popup-wrapper.bracket-popup-team {
+    width: 460px
+}
+
+.wiki-warcraft .bracket-popup-wrapper.bracket-popup-player {
+    width: 250px
+}
+
+.wiki-warcraft .bracket-popup-wrapper.bracket-popup-team {
+    width: 400px
+}
+
+.wiki-leagueoflegends .bracket-popup-wrapper.bracket-popup-team {
+    width: 390px
+}
+
+.wiki-worldofwarcraft .bracket-popup-wrapper.bracket-popup-team {
+    width: 380px
+}
+
+.bracket-popup-wrapper.bracket-popup-wrapper-mobile {
+    width: 100% !important;
+    bottom: 0;
+    left: 0;
+    z-index: 1
+}
+
+.bracket-popup-wrapper.bracket-popup-wrapper-mobile .bracket-popup,.bracket-popup-wrapper.bracket-popup-mobile .bracket-popup {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0
+}
+
+.bracket-popup div.match-row {
+    line-height: 33px;
+    padding-top: 1px;
+    position: relative
+}
+
+.wiki-dota2 .bracket-popup div.match-row,.wiki-worldofwarcraft .bracket-popup div.match-row,.wiki-teamfortress .bracket-popup div.match-row {
+    line-height: 21px;
+    min-height: 21px
+}
+
+.bracket-popup .left div.side {
+    float: left
+}
+
+.bracket-popup .left div.side table {
+    margin-right: auto
+}
+
+.bracket-popup .right div.side {
+    float: right
+}
+
+.bracket-popup .right div.side table {
+    margin-left: auto
+}
+
+.bracket-popup div.side {
+    width: 110px;
+    text-align: center;
+    letter-spacing: 0
+}
+
+.bracket-popup div.side table td {
+    line-height: 15px
+}
+
+.bracket-popup div.side .popup-progress {
+    border-radius: 5px;
+    width: 50px;
+    height: 15px;
+    border: 1px solid #bbbbbb;
+    position: relative;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.bracket-popup div.side .popup-progress > div.bar {
+    height: 15px;
+    border-radius: 4px;
+    float: left;
+    line-height: 17px
+}
+
+.bracket-popup div.side .popup-progress > div.bar.bg-color {
+    background-color: #e5b6c0
+}
+
+.bracket-popup div.side .popup-progress > div.bar-text {
+    height: 15px;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.bracket-popup .left div.draft {
+    left: 2px
+}
+
+.bracket-popup .right div.draft {
+    right: 2px
+}
+
+.bracket-popup div.draft {
+    position: absolute;
+    width: 149px
+}
+
+.bracket-popup .left .check {
+    left: 157px;
+    position: absolute
+}
+
+.bracket-popup .right .check {
+    right: 158px;
+    position: absolute
+}
+
+.wiki-overwatch .bracket-popup .left .check,.wiki-teamfortress .bracket-popup .left .check,.wiki-worldofwarcraft .bracket-popup .left .check {
+    float: left;
+    width: 40px;
+    text-align: center;
+    position: initial;
+    left: initial
+}
+
+.wiki-overwatch .bracket-popup .right .check,.wiki-teamfortress .bracket-popup .right .check,.wiki-worldofwarcraft .bracket-popup .right .check {
+    float: right;
+    width: 40px;
+    text-align: center;
+    position: initial;
+    right: initial
+}
+
+.bracket-popup div.wow-popup-center > * {
+    display: inline-block;
+    margin: 0 3px
+}
+
+.bracket-popup div.wow-popup-center > .wow-game-damp abbr {
+    color: #ff0000
+}
+
+.bracket-popup div.game-battleground {
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center
+}
+
+.bracket-popup div.game-length {
+    font-size: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    top: 3px
+}
+
+.bracket-popup div.draft img {
+    border: 2px solid transparent;
+    margin: -2px;
+    display: inline-block
+}
+
+.bracket-popup div.draft.dire img {
+    border-color: #E79E7E
+}
+
+.bracket-popup div.draft.radiant img {
+    border-color: #BCD985
+}
+
+.bracket-popup div.side .popup-progress {
+    border-radius: 5px;
+    width: 50px;
+    height: 15px;
+    border: 1px solid #bbbbbb;
+    position: relative;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.bracket-popup div.side .popup-progress > div.bar {
+    height: 15px;
+    border-radius: 4px;
+    float: left;
+    line-height: 17px
+}
+
+.bracket-popup div.side .popup-progress > div.bar.bg-color {
+    background-color: #e5b6c0
+}
+
+.bracket-popup div.side .popup-progress > div.bar-text {
+    height: 15px;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.grouptable-start-date {
+    font-size: 85%;
+    line-height: 90%;
+    height: 13px;
+    text-align: center
+}
+
+.grouptable-start-countdown {
+    padding: 5px 0px 0px 0px;
+    display: block
+}
+
+.wiki-leagueoflegends .bracket-popup-body-match .match-row .draft.blue {
+    background-color: #becedc
+}
+
+.wiki-leagueoflegends .bracket-popup-body-match .match-row .draft.red {
+    background-color: #dcbece
+}
+
+.wiki-leagueoflegends .bracket-popup div.draft img {
+    margin-top: -4px;
+    height: 25px;
+    width: 25px
+}
+
+.draft > a > img:hover {
+    -ms-transform: scale(2,2);
+    -webkit-transform: scale(2,2);
+    transform: scale(2,2)
+}
+
+@media (max-width: 767px) {
+    .bracket-column-matches {
+        width:68px !important
+    }
+
+    .bracket-column-matches-s2 {
+        width: 90px !important
+    }
+
+    .bracket-column-matches-s2-s3 {
+        width: 112px !important
+    }
+
+    .bracket-wrapper.bracket-team .team-template-team-bracket .team-template-text {
+        display: none !important
+    }
+
+    .bracket-wrapper.bracket-player .bracket-player-top img,.bracket-wrapper.bracket-player .bracket-player-bottom img,.bracket-wrapper.bracket-player .bracket-player-middle img {
+        display: none !important
+    }
+
+    .bracket-wrapper.bracket-player .bracket-player-top .bracket-score img,.bracket-wrapper.bracket-player .bracket-player-bottom .bracket-score img,.bracket-wrapper.bracket-player .bracket-player-middle .bracket-score img {
+        display: initial !important
+    }
+
+    .bracket-wrapper.bracket-player .bracket-player-top,.bracket-wrapper.bracket-player .bracket-player-bottom,.bracket-wrapper.bracket-player .bracket-player-middle {
+        overflow: hidden
+    }
+
+    .bracket-archon-mode .bracket-score,.bracket-doubles .bracket-score {
+        width: 21px !important
+    }
+
+    .bracket-archon-mode .bracket-game .icon,.bracket-doubles .bracket-game .icon {
+        right: 16px
+    }
+
+    .bracket-width-1col {
+        width: calc(68px) !important
+    }
+
+    .bracket-width-1col-10 {
+        width: calc(78px) !important
+    }
+
+    .bracket-width-1col-20 {
+        width: calc(88px) !important
+    }
+
+    .bracket-width-2col-20 {
+        width: calc(156px) !important
+    }
+
+    .bracket-width-2col-20-20 {
+        width: calc(176px) !important
+    }
+
+    .bracket-width-2col-20-s2 {
+        width: calc(178px) !important
+    }
+
+    .bracket-width-2col-20-s2-20 {
+        width: calc(198px) !important
+    }
+
+    .bracket-width-2col-20-s2-s2 {
+        width: calc(200px) !important
+    }
+
+    .bracket-width-2col-20-s2-s3 {
+        width: calc(200px) !important
+    }
+
+    .bracket-width-2col-20-s2-s2-s3 {
+        width: calc(222px) !important
+    }
+
+    .bracket-width-2col-20-s2-s3-s2 {
+        width: calc(222px) !important
+    }
+
+    .bracket-width-2col-20-s2-s3-s2-s3 {
+        width: calc(244px) !important
+    }
+
+    .bracket-width-3col-10 {
+        width: calc(224px) !important
+    }
+
+    .bracket-width-3col-20 {
+        width: calc(244px) !important
+    }
+
+    .bracket-width-3col-20-s2 {
+        width: calc(266px) !important
+    }
+
+    .bracket-width-3col-20-s2-s2 {
+        width: calc(288px) !important
+    }
+
+    .bracket-width-3col-20-s2-s3 {
+        width: calc(288px) !important
+    }
+
+    .bracket-width-3col-20-s2-s2-s3 {
+        width: calc(310px) !important
+    }
+
+    .bracket-width-3col-20-s2-s3-s2 {
+        width: calc(310px) !important
+    }
+
+    .bracket-width-3col-20-s2-s3-s2-s3 {
+        width: calc(332px) !important
+    }
+
+    .bracket-width-4col-10 {
+        width: calc(302px) !important
+    }
+
+    .bracket-width-4col-10-10 {
+        width: calc(312px) !important
+    }
+
+    .bracket-width-4col-20 {
+        width: calc(332px) !important
+    }
+
+    .bracket-width-4col-20-10 {
+        width: calc(342px) !important
+    }
+
+    .bracket-width-4col-20-20 {
+        width: calc(352px) !important
+    }
+
+    .bracket-width-4col-20-s2 {
+        width: calc(354px) !important
+    }
+
+    .bracket-width-4col-20-s2-20 {
+        width: calc(374px) !important
+    }
+
+    .bracket-width-4col-20-s2-s2 {
+        width: calc(376px) !important
+    }
+
+    .bracket-width-4col-20-s2-s3 {
+        width: calc(376px) !important
+    }
+
+    .bracket-width-4col-20-s2-s3-20 {
+        width: calc(396px) !important
+    }
+
+    .bracket-width-4col-20-s2-s2-s3 {
+        width: calc(398px) !important
+    }
+
+    .bracket-width-4col-20-s2-s3-s2 {
+        width: calc(398px) !important
+    }
+
+    .bracket-width-4col-20-s2-s3-s2-s3 {
+        width: calc(420px) !important
+    }
+
+    .bracket-width-5col-10 {
+        width: calc(380px) !important
+    }
+
+    .bracket-width-5col-10-10 {
+        width: calc(390px) !important
+    }
+
+    .bracket-width-5col-20 {
+        width: calc(420px) !important
+    }
+
+    .bracket-width-5col-20-s2 {
+        width: calc(442px) !important
+    }
+
+    .bracket-width-5col-20-20 {
+        width: calc(440px) !important
+    }
+
+    .bracket-width-5col-20-s2-20 {
+        width: calc(462px) !important
+    }
+
+    .bracket-width-6col-10 {
+        width: calc(458px) !important
+    }
+
+    .bracket-width-6col-10-s2 {
+        width: calc(480px) !important
+    }
+
+    .bracket-width-6col-10-10 {
+        width: calc(468px) !important
+    }
+
+    .bracket-width-6col-10-s2-10 {
+        width: calc(490px) !important
+    }
+
+    .bracket-width-6col-20 {
+        width: calc(508px) !important
+    }
+
+    .bracket-width-6col-20-s2 {
+        width: calc(530px) !important
+    }
+
+    .bracket-width-6col-20-10 {
+        width: calc(518px) !important
+    }
+
+    .bracket-width-6col-20-s2-10 {
+        width: calc(540px) !important
+    }
+
+    .bracket-width-7col-10 {
+        width: calc(536px) !important
+    }
+
+    .bracket-width-7col-10-10 {
+        width: calc(546px) !important
+    }
+
+    .bracket-width-7col-10-s2 {
+        width: calc(558px) !important
+    }
+
+    .bracket-width-7col-10-s2-10 {
+        width: calc(568px) !important
+    }
+
+    .bracket-width-7col-20 {
+        width: calc(596px) !important
+    }
+
+    .bracket-width-7col-20-20 {
+        width: calc(616px) !important
+    }
+
+    .bracket-width-7col-20-s2 {
+        width: calc(618px) !important
+    }
+
+    .bracket-width-7col-20-s2-20 {
+        width: calc(638px) !important
+    }
+
+    .bracket-width-8col-10 {
+        width: calc(614px) !important
+    }
+
+    .bracket-width-8col-10-10 {
+        width: calc(624px) !important
+    }
+
+    .bracket-width-8col-10-s2 {
+        width: calc(636px) !important
+    }
+
+    .bracket-width-8col-10-s2-10 {
+        width: calc(646px) !important
+    }
+
+    .bracket-width-9col-10 {
+        width: calc(692px) !important
+    }
+
+    .bracket-width-9col-10-10 {
+        width: calc(702px) !important
+    }
+
+    .bracket-width-9col-10-s2 {
+        width: calc(714px) !important
+    }
+
+    .bracket-width-9col-10-s2-10 {
+        width: calc(724px) !important
+    }
+
+    .bracket-width-10col-10 {
+        width: calc(770px) !important
+    }
+
+    .bracket-width-10col-10-10 {
+        width: calc(780px) !important
+    }
+
+    .bracket-width-10col-10-s2 {
+        width: calc(792px) !important
+    }
+
+    .bracket-width-10col-10-s2-10 {
+        width: calc(802px) !important
+    }
+
+    .bracket-width-11col-10 {
+        width: calc(848px) !important
+    }
+
+    .bracket-width-11col-10-10 {
+        width: calc(858px) !important
+    }
+
+    .bracket-width-11col-10-s2 {
+        width: calc(870px) !important
+    }
+
+    .bracket-width-11col-10-s2-10 {
+        width: calc(880px) !important
+    }
+}
+
+.fo-nttax-infobox-wrapper {
+    clear: right;
+    float: right;
+    margin: 10px 0 10px 10px;
+    font-size: 90%
+}
+
+.fo-nttax-infobox-adbox {
+    width: 336px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    overflow: hidden;
+    text-align: center
+}
+
+.fo-nttax-infobox-adbox > * {
+    margin: 0 auto
+}
+
+.fo-nttax-infobox {
+    width: 336px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-style: solid;
+    border-bottom-style: solid
+}
+
+.fo-nttax-infobox > div {
+    display: table;
+    width: 100%
+}
+
+.fo-nttax-infobox > div:nth-child(2n+1) {
+    background-color: #eeeeee
+}
+
+.fo-nttax-infobox > div:nth-child(2n) {
+    background-color: #f5f5f5
+}
+
+.fo-nttax-infobox > div:after {
+    clear: both
+}
+
+.fo-nttax-infobox > div > div {
+    width: 100%;
+    float: left;
+    height: inherit;
+    padding: 5px
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-2 {
+    width: 50%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-3 {
+    width: 33.3333%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-4 {
+    width: 25%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-5 {
+    width: 20%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-6 {
+    width: 16.6666%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-7 {
+    width: 14.2857%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-8 {
+    width: 12.5%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-9 {
+    width: 11.1111%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-10 {
+    width: 10%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-11 {
+    width: 9.0909%
+}
+
+.fo-nttax-infobox > div > div.infobox-cell-12 {
+    width: 8.3333%
+}
+
+.fo-nttax-infobox-wrapper .infobox-header {
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px
+}
+
+.fo-nttax-infobox-wrapper .infobox-header-2 {
+    font-size: 17px
+}
+
+.fo-nttax-infobox-wrapper .infobox-header-3 {
+    font-size: 15px
+}
+
+.fo-nttax-infobox > div > div.infobox-description {
+    font-weight: bold;
+    text-align: right
+}
+
+.fo-nttax-infobox > div > div.infobox-image {
+    padding: 0;
+    width: 100%
+}
+
+.fo-nttax-infobox > div > div.infobox-image:not(.infobox-fixed-size-image) img {
+    width: 100%;
+    height: auto
+}
+
+.fo-nttax-infobox > div > div.infobox-center {
+    text-align: center
+}
+
+.fo-nttax-infobox-wrapper .infobox-header .infobox-buttons {
+    float: right;
+    font-size: 12px;
+    font-weight: 500
+}
+
+.fo-nttax-infobox-wrapper .infobox-header .infobox-buttons a {
+    background: none repeat scroll 0% 0% transparent !important;
+    padding: 0px !important
+}
+
+.fo-nttax-infobox-wrapper .infobox-icons a {
+    background: none repeat scroll 0% 0% transparent !important;
+    padding: 0px !important
+}
+
+.fo-nttax-infobox-wrapper .infobox-text-left {
+    text-align: left
+}
+
+.fo-nttax-infobox-wrapper .infobox-text-right {
+    text-align: right
+}
+
+.fo-nttax-infobox-wrapper .infobox-float-left {
+    float: left
+}
+
+.fo-nttax-infobox-wrapper .infobox-float-right {
+    float: right
+}
+
+@media (max-width: 600px) {
+    .fo-nttax-infobox-wrapper {
+        width:100%;
+        margin-left: 0;
+        float: none
+    }
+
+    .fo-nttax-infobox {
+        width: 100%
+    }
+
+    .fo-nttax-infobox-adbox {
+        width: 100%
+    }
+
+    .fo-nttax-infobox-wrapper .infobox-image > div > div {
+        text-align: center
+    }
+}
+
+.fo-nttax-infobox-wrapper .infobox-gold {
+    font-size: 11pt;
+    color: #f5c433;
+    text-shadow: -1px 0 #555555,0 1px #555555,1px 0 #555555,0 -1px #555555
+}
+
+.fo-nttax-infobox-wrapper .infobox-gradient {
+    background: linear-gradient(to right,#ffcccc,#ffddaa,#ffff99,#eeffaa,#ccffcc) repeat scroll 0% 0% transparent;
+    line-height: 0.1px
+}
+
+.fo-nttax-infobox-wrapper .infobox-color-always {
+    background-color: #ccffcc
+}
+
+.fo-nttax-infobox-wrapper .infobox-color-very.often {
+    background-color: #eeffaa
+}
+
+.fo-nttax-infobox-wrapper .infobox-color-often {
+    background-color: #ffff99
+}
+
+.fo-nttax-infobox-wrapper .infobox-color-seldom {
+    background-color: #ffddaa
+}
+
+.fo-nttax-infobox-wrapper .infobox-color-never {
+    background-color: #ffcccc
+}
+
+.fo-nttax-infobox-wrapper.popout {
+    position: absolute;
+    top: 0;
+    left: 990px
+}
+
+.fo-nttax-infobox-wrapper.infobox-wol .infobox-header {
+    background-color: #b6cfe5
+}
+
+.fo-nttax-infobox-wrapper.infobox-hots .infobox-header {
+    background-color: #deb0b0
+}
+
+.fo-nttax-infobox-wrapper.infobox-lotv .infobox-header {
+    background-color: #b0deb0
+}
+
+.fo-nttax-infobox-wrapper.infobox-mod .infobox-header {
+    background-color: #f2e8b8
+}
+
+.fo-nttax-infobox-wrapper.infobox-64 .infobox-header {
+    background-color: #d5e5b6
+}
+
+.fo-nttax-infobox-wrapper.infobox-melee .infobox-header {
+    background-color: #b6e5c6
+}
+
+.fo-nttax-infobox-wrapper.infobox-brawl .infobox-header {
+    background-color: #b6d5e5
+}
+
+.fo-nttax-infobox-wrapper.infobox-pm .infobox-header {
+    background-color: #c6b6e5
+}
+
+.fo-nttax-infobox-wrapper.infobox-3ds .infobox-header {
+    background-color: #e5b6d5
+}
+
+.fo-nttax-infobox-wrapper.infobox-wiiu .infobox-header {
+    background-color: #e5c6b6
+}
+
+.fo-nttax-infobox-wrapper.infobox-csgo .infobox-header {
+    background-color: #cde5b6
+}
+
+.fo-nttax-infobox-wrapper.infobox-css .infobox-header {
+    background-color: #deb0b0
+}
+
+.fo-nttax-infobox-wrapper.infobox-cs16 .infobox-header {
+    background-color: #f2e8b8
+}
+
+.fo-nttax-infobox-wrapper.infobox-cscz .infobox-header {
+    background-color: #b6cfe5
+}
+
+.crosstable[class*=row] td,.crosstable[class*=col] td {
+    opacity: 0.5;
+    -moz-box-shadow: inset 0px 0px 10px -7px #000000,inset 0px 0px 10px -7px #000000;
+    -webkit-box-shadow: inset 0px 0px 10px -7px #000000,inset 0px 0px 10px -7px #000000;
+    box-shadow: inset 0px 0px 10px -7px #000000,inset 0px 0px 10px -7px #000000;
+    background-color: #ffffff
+}
+
+.crosstable.row-1 tr:nth-child(2) td,.crosstable.row-2 tr:nth-child(3) td,.crosstable.row-3 tr:nth-child(4) td,.crosstable.row-4 tr:nth-child(5) td,.crosstable.row-5 tr:nth-child(6) td,.crosstable.row-6 tr:nth-child(7) td,.crosstable.row-7 tr:nth-child(8) td,.crosstable.row-8 tr:nth-child(9) td,.crosstable.row-9 tr:nth-child(10) td,.crosstable.row-10 tr:nth-child(11) td,.crosstable.row-11 tr:nth-child(12) td,.crosstable.row-12 tr:nth-child(13) td,.crosstable.row-13 tr:nth-child(14) td,.crosstable.row-14 tr:nth-child(15) td,.crosstable.row-15 tr:nth-child(16) td,.crosstable.row-16 tr:nth-child(17) td,.crosstable.row-17 tr:nth-child(18) td,.crosstable.row-18 tr:nth-child(19) td,.crosstable.row-19 tr:nth-child(20) td,.crosstable.row-20 tr:nth-child(21) td,.crosstable.row-21 tr:nth-child(22) td {
+    -moz-box-shadow: inset 0px 10px 10px -7px #000000,inset 0px 0px 10px -7px #000000;
+    -webkit-box-shadow: inset 0px 10px 10px -7px #000000,inset 0px 0px 10px -7px #000000;
+    box-shadow: inset 0px 10px 10px -7px #000000,inset 0px 0px 10px -7px #000000
+}
+
+.crosstable.row-2 tr:nth-child(1) td,.crosstable.row-3 tr:nth-child(2) td,.crosstable.row-4 tr:nth-child(3) td,.crosstable.row-5 tr:nth-child(4) td,.crosstable.row-6 tr:nth-child(5) td,.crosstable.row-7 tr:nth-child(6) td,.crosstable.row-8 tr:nth-child(7) td,.crosstable.row-9 tr:nth-child(8) td,.crosstable.row-10 tr:nth-child(9) td,.crosstable.row-11 tr:nth-child(10) td,.crosstable.row-12 tr:nth-child(11) td,.crosstable.row-13 tr:nth-child(12) td,.crosstable.row-14 tr:nth-child(13) td,.crosstable.row-15 tr:nth-child(14) td,.crosstable.row-16 tr:nth-child(15) td,.crosstable.row-17 tr:nth-child(16) td,.crosstable.row-18 tr:nth-child(17) td,.crosstable.row-19 tr:nth-child(18) td,.crosstable.row-20 tr:nth-child(19) td,.crosstable.row-21 tr:nth-child(20) td,.crosstable.row-22 tr:nth-child(21) td {
+    -moz-box-shadow: inset 0px 0px 10px -7px #000000,inset 0px -10px 10px -7px #000000;
+    -webkit-box-shadow: inset 0px 0px 10px -7px #000000,inset 0px -10px 10px -7px #000000;
+    box-shadow: inset 0px 0px 10px -7px #000000,inset 0px -10px 10px -7px #000000
+}
+
+.crosstable.col-1 td:nth-child(2),.crosstable.col-2 td:nth-child(3),.crosstable.col-3 td:nth-child(4),.crosstable.col-4 td:nth-child(5),.crosstable.col-5 td:nth-child(6),.crosstable.col-6 td:nth-child(7),.crosstable.col-7 td:nth-child(8),.crosstable.col-8 td:nth-child(9),.crosstable.col-9 td:nth-child(10),.crosstable.col-10 td:nth-child(11),.crosstable.col-11 td:nth-child(12),.crosstable.col-12 td:nth-child(13),.crosstable.col-13 td:nth-child(14),.crosstable.col-14 td:nth-child(15),.crosstable.col-15 td:nth-child(16),.crosstable.col-16 td:nth-child(17),.crosstable.col-17 td:nth-child(18),.crosstable.col-18 td:nth-child(19),.crosstable.col-19 td:nth-child(20),.crosstable.col-20 td:nth-child(21),.crosstable.col-21 td:nth-child(22) {
+    -moz-box-shadow: inset 10px 0px 10px -7px #000000,inset 0px 0px 10px -7px #000000;
+    -webkit-box-shadow: inset 10px 0px 10px -7px #000000,inset 0px 0px 10px -7px #000000;
+    box-shadow: inset 10px 0px 10px -7px #000000,inset 0px 0px 10px -7px #000000
+}
+
+.crosstable.col-3 td:nth-child(2),.crosstable.col-4 td:nth-child(3),.crosstable.col-5 td:nth-child(4),.crosstable.col-6 td:nth-child(5),.crosstable.col-7 td:nth-child(6),.crosstable.col-8 td:nth-child(7),.crosstable.col-9 td:nth-child(8),.crosstable.col-10 td:nth-child(9),.crosstable.col-11 td:nth-child(10),.crosstable.col-12 td:nth-child(11),.crosstable.col-13 td:nth-child(12),.crosstable.col-14 td:nth-child(13),.crosstable.col-15 td:nth-child(14),.crosstable.col-16 td:nth-child(15),.crosstable.col-17 td:nth-child(16),.crosstable.col-18 td:nth-child(17),.crosstable.col-19 td:nth-child(18),.crosstable.col-20 td:nth-child(19),.crosstable.col-21 td:nth-child(20),.crosstable.col-22 td:nth-child(21) {
+    -moz-box-shadow: inset 0px 0px 10px -7px #000000,inset -10px 0px 10px -7px #000000;
+    -webkit-box-shadow: inset 0px 0px 10px -7px #000000,inset -10px 0px 10px -7px #000000;
+    box-shadow: inset 0px 0px 10px -7px #000000,inset -10px 0px 10px -7px #000000
+}
+
+.crosstable .crosstable-top-left {
+    -moz-box-shadow: inset 0px 0px 10px -7px #000000,inset -10px -10px 10px -7px #000000 !important;
+    -webkit-box-shadow: inset 0px 0px 10px -7px #000000,inset -10px -10px 10px -7px #000000 !important;
+    box-shadow: inset 0px 0px 10px -7px #000000,inset -10px -10px 10px -7px #000000 !important
+}
+
+.crosstable .crosstable-top-right {
+    -moz-box-shadow: inset 10px 0px 10px -7px #000000,inset 0px -10px 10px -7px #000000 !important;
+    -webkit-box-shadow: inset 10px 0px 10px -7px #000000,inset 0px -10px 10px -7px #000000 !important;
+    box-shadow: inset 10px 0px 10px -7px #000000,inset 0px -10px 10px -7px #000000 !important
+}
+
+.crosstable .crosstable-bottom-left {
+    -moz-box-shadow: inset 0px 10px 10px -7px #000000,inset -10px 0px 10px -7px #000000 !important;
+    -webkit-box-shadow: inset 0px 10px 10px -7px #000000,inset -10px 0px 10px -7px #000000 !important;
+    box-shadow: inset 0px 10px 10px -7px #000000,inset -10px 0px 10px -7px #000000 !important
+}
+
+.crosstable .crosstable-bottom-right {
+    -moz-box-shadow: inset 10px 10px 10px -7px #000000,inset 0px 0px 10px -7px #000000 !important;
+    -webkit-box-shadow: inset 10px 10px 10px -7px #000000,inset 0px 0px 10px -7px #000000 !important;
+    box-shadow: inset 10px 10px 10px -7px #000000,inset 0px 0px 10px -7px #000000 !important
+}
+
+.crosstable.row-1 tr:nth-child(1) td,.crosstable.row-2 tr:nth-child(2) td,.crosstable.row-3 tr:nth-child(3) td,.crosstable.row-4 tr:nth-child(4) td,.crosstable.row-5 tr:nth-child(5) td,.crosstable.row-6 tr:nth-child(6) td,.crosstable.row-7 tr:nth-child(7) td,.crosstable.row-8 tr:nth-child(8) td,.crosstable.row-9 tr:nth-child(9) td,.crosstable.row-10 tr:nth-child(10) td,.crosstable.row-11 tr:nth-child(11) td,.crosstable.row-12 tr:nth-child(12) td,.crosstable.row-13 tr:nth-child(13) td,.crosstable.row-14 tr:nth-child(14) td,.crosstable.row-15 tr:nth-child(15) td,.crosstable.row-16 tr:nth-child(16) td,.crosstable.row-17 tr:nth-child(17) td,.crosstable.row-18 tr:nth-child(18) td,.crosstable.row-19 tr:nth-child(19) td,.crosstable.row-20 tr:nth-child(20) td,.crosstable.row-21 tr:nth-child(21) td,.crosstable.row-22 tr:nth-child(22) td {
+    opacity: 1 !important;
+    -moz-box-shadow: unset !important;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important
+}
+
+.crosstable.col-1 th:nth-child(1),.crosstable.col-2 td:nth-child(2),.crosstable.col-3 td:nth-child(3),.crosstable.col-4 td:nth-child(4),.crosstable.col-5 td:nth-child(5),.crosstable.col-6 td:nth-child(6),.crosstable.col-7 td:nth-child(7),.crosstable.col-8 td:nth-child(8),.crosstable.col-9 td:nth-child(9),.crosstable.col-10 td:nth-child(10),.crosstable.col-11 td:nth-child(11),.crosstable.col-12 td:nth-child(12),.crosstable.col-13 td:nth-child(13),.crosstable.col-14 td:nth-child(14),.crosstable.col-15 td:nth-child(15),.crosstable.col-16 td:nth-child(16),.crosstable.col-17 td:nth-child(17),.crosstable.col-18 td:nth-child(18),.crosstable.col-19 td:nth-child(19),.crosstable.col-20 td:nth-child(20),.crosstable.col-21 td:nth-child(21),.crosstable.col-22 td:nth-child(22) {
+    opacity: 1 !important;
+    -moz-box-shadow: unset !important;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important
+}
+
+.crosstable tr td.crosstable-bgc-r0-r0 {
+    background-color: #f9f9f9
+}
+
+.crosstable.zerodraw .crosstable-bgc-r0-r0,.crosstable tr td.crosstable-bgc-r1-r1,.crosstable tr td.crosstable-bgc-r2-r2,.crosstable tr td.crosstable-bgc-r3-r3,.crosstable tr td.crosstable-bgc-r4-r4,.crosstable tr td.crosstable-bgc-r5-r5,.crosstable tr td.crosstable-bgc-r6-r6,.crosstable tr td.crosstable-bgc-r7-r7,.crosstable tr td.crosstable-bgc-r8-r8,.crosstable tr td.crosstable-bgc-r9-r9,.crosstable tr td.crosstable-bgc-r10-r10,.crosstable tr td.crosstable-bgc-r11-r11,.crosstable tr td.crosstable-bgc-r12-r12,.crosstable tr td.crosstable-bgc-r13-r13,.crosstable tr td.crosstable-bgc-r14-r14,.crosstable tr td.crosstable-bgc-r15-r15,.crosstable tr td.crosstable-bgc-r16-r16,.crosstable tr td.crosstable-bgc-r½-r½ {
+    background-color: #ffffbb
+}
+
+.crosstable tr td.crosstable-bgc-r0-r1,.crosstable tr td.crosstable-bgc-r0-r2,.crosstable tr td.crosstable-bgc-r0-r3,.crosstable tr td.crosstable-bgc-r0-r4,.crosstable tr td.crosstable-bgc-r0-r5,.crosstable tr td.crosstable-bgc-r0-r6,.crosstable tr td.crosstable-bgc-r0-r7,.crosstable tr td.crosstable-bgc-r0-r8,.crosstable tr td.crosstable-bgc-r0-r9,.crosstable tr td.crosstable-bgc-r0-r10,.crosstable tr td.crosstable-bgc-r0-r11,.crosstable tr td.crosstable-bgc-r0-r12,.crosstable tr td.crosstable-bgc-r0-r13,.crosstable tr td.crosstable-bgc-r0-r14,.crosstable tr td.crosstable-bgc-r0-r15,.crosstable tr td.crosstable-bgc-r0-r16,.crosstable tr td.crosstable-bgc-r1-r2,.crosstable tr td.crosstable-bgc-r1-r3,.crosstable tr td.crosstable-bgc-r1-r4,.crosstable tr td.crosstable-bgc-r1-r5,.crosstable tr td.crosstable-bgc-r1-r6,.crosstable tr td.crosstable-bgc-r1-r7,.crosstable tr td.crosstable-bgc-r1-r8,.crosstable tr td.crosstable-bgc-r1-r9,.crosstable tr td.crosstable-bgc-r1-r10,.crosstable tr td.crosstable-bgc-r1-r11,.crosstable tr td.crosstable-bgc-r1-r12,.crosstable tr td.crosstable-bgc-r1-r13,.crosstable tr td.crosstable-bgc-r1-r14,.crosstable tr td.crosstable-bgc-r1-r15,.crosstable tr td.crosstable-bgc-r1-r16,.crosstable tr td.crosstable-bgc-r2-r3,.crosstable tr td.crosstable-bgc-r2-r4,.crosstable tr td.crosstable-bgc-r2-r5,.crosstable tr td.crosstable-bgc-r2-r6,.crosstable tr td.crosstable-bgc-r2-r7,.crosstable tr td.crosstable-bgc-r2-r8,.crosstable tr td.crosstable-bgc-r2-r9,.crosstable tr td.crosstable-bgc-r2-r10,.crosstable tr td.crosstable-bgc-r2-r11,.crosstable tr td.crosstable-bgc-r2-r12,.crosstable tr td.crosstable-bgc-r2-r13,.crosstable tr td.crosstable-bgc-r2-r14,.crosstable tr td.crosstable-bgc-r2-r15,.crosstable tr td.crosstable-bgc-r2-r16,.crosstable tr td.crosstable-bgc-r3-r4,.crosstable tr td.crosstable-bgc-r3-r5,.crosstable tr td.crosstable-bgc-r3-r6,.crosstable tr td.crosstable-bgc-r3-r7,.crosstable tr td.crosstable-bgc-r3-r8,.crosstable tr td.crosstable-bgc-r3-r9,.crosstable tr td.crosstable-bgc-r3-r10,.crosstable tr td.crosstable-bgc-r3-r11,.crosstable tr td.crosstable-bgc-r3-r12,.crosstable tr td.crosstable-bgc-r3-r13,.crosstable tr td.crosstable-bgc-r3-r14,.crosstable tr td.crosstable-bgc-r3-r15,.crosstable tr td.crosstable-bgc-r3-r16,.crosstable tr td.crosstable-bgc-r4-r5,.crosstable tr td.crosstable-bgc-r4-r6,.crosstable tr td.crosstable-bgc-r4-r7,.crosstable tr td.crosstable-bgc-r4-r8,.crosstable tr td.crosstable-bgc-r4-r9,.crosstable tr td.crosstable-bgc-r4-r10,.crosstable tr td.crosstable-bgc-r4-r11,.crosstable tr td.crosstable-bgc-r4-r12,.crosstable tr td.crosstable-bgc-r4-r13,.crosstable tr td.crosstable-bgc-r4-r14,.crosstable tr td.crosstable-bgc-r4-r15,.crosstable tr td.crosstable-bgc-r4-r16,.crosstable tr td.crosstable-bgc-r5-r6,.crosstable tr td.crosstable-bgc-r5-r7,.crosstable tr td.crosstable-bgc-r5-r8,.crosstable tr td.crosstable-bgc-r5-r9,.crosstable tr td.crosstable-bgc-r5-r10,.crosstable tr td.crosstable-bgc-r5-r11,.crosstable tr td.crosstable-bgc-r5-r12,.crosstable tr td.crosstable-bgc-r5-r13,.crosstable tr td.crosstable-bgc-r5-r14,.crosstable tr td.crosstable-bgc-r5-r15,.crosstable tr td.crosstable-bgc-r5-r16,.crosstable tr td.crosstable-bgc-r6-r7,.crosstable tr td.crosstable-bgc-r6-r8,.crosstable tr td.crosstable-bgc-r6-r9,.crosstable tr td.crosstable-bgc-r6-r10,.crosstable tr td.crosstable-bgc-r6-r11,.crosstable tr td.crosstable-bgc-r6-r12,.crosstable tr td.crosstable-bgc-r6-r13,.crosstable tr td.crosstable-bgc-r6-r14,.crosstable tr td.crosstable-bgc-r6-r15,.crosstable tr td.crosstable-bgc-r6-r16,.crosstable tr td.crosstable-bgc-r7-r8,.crosstable tr td.crosstable-bgc-r7-r9,.crosstable tr td.crosstable-bgc-r7-r10,.crosstable tr td.crosstable-bgc-r7-r11,.crosstable tr td.crosstable-bgc-r7-r12,.crosstable tr td.crosstable-bgc-r7-r13,.crosstable tr td.crosstable-bgc-r7-r14,.crosstable tr td.crosstable-bgc-r7-r15,.crosstable tr td.crosstable-bgc-r7-r16,.crosstable tr td.crosstable-bgc-r8-r9,.crosstable tr td.crosstable-bgc-r8-r10,.crosstable tr td.crosstable-bgc-r8-r11,.crosstable tr td.crosstable-bgc-r8-r12,.crosstable tr td.crosstable-bgc-r8-r13,.crosstable tr td.crosstable-bgc-r8-r14,.crosstable tr td.crosstable-bgc-r8-r15,.crosstable tr td.crosstable-bgc-r8-r16,.crosstable tr td.crosstable-bgc-r9-r10,.crosstable tr td.crosstable-bgc-r9-r11,.crosstable tr td.crosstable-bgc-r9-r12,.crosstable tr td.crosstable-bgc-r9-r13,.crosstable tr td.crosstable-bgc-r9-r14,.crosstable tr td.crosstable-bgc-r9-r15,.crosstable tr td.crosstable-bgc-r9-r16,.crosstable tr td.crosstable-bgc-r10-r11,.crosstable tr td.crosstable-bgc-r10-r12,.crosstable tr td.crosstable-bgc-r10-r13,.crosstable tr td.crosstable-bgc-r10-r14,.crosstable tr td.crosstable-bgc-r10-r15,.crosstable tr td.crosstable-bgc-r10-r16,.crosstable tr td.crosstable-bgc-r11-r12,.crosstable tr td.crosstable-bgc-r11-r13,.crosstable tr td.crosstable-bgc-r11-r14,.crosstable tr td.crosstable-bgc-r11-r15,.crosstable tr td.crosstable-bgc-r11-r16,.crosstable tr td.crosstable-bgc-r12-r13,.crosstable tr td.crosstable-bgc-r12-r14,.crosstable tr td.crosstable-bgc-r12-r15,.crosstable tr td.crosstable-bgc-r12-r16,.crosstable tr td.crosstable-bgc-r13-r14,.crosstable tr td.crosstable-bgc-r13-r15,.crosstable tr td.crosstable-bgc-r13-r16,.crosstable tr td.crosstable-bgc-r14-r15,.crosstable tr td.crosstable-bgc-r14-r16,.crosstable tr td.crosstable-bgc-r15-r16,.crosstable tr td.crosstable-bgc-r15-r19,.crosstable tr td.crosstable-bgc-r15-r21,.crosstable tr td.crosstable-bgc-r16-r19,.crosstable tr td.crosstable-bgc-r16-r21,.crosstable tr td.crosstable-bgc-r17-r19,.crosstable tr td.crosstable-bgc-r17-r21,.crosstable tr td.crosstable-bgc-r18-r21,.crosstable tr td.crosstable-bgc-r18-r22,.crosstable tr td.crosstable-bgc-r19-r21,.crosstable tr td.crosstable-bgc-r19-r22,.crosstable tr td.crosstable-bgc-r20-r22,.crosstable tr td.crosstable-bgc-r20-r26,.crosstable tr td.crosstable-bgc-r21-r25,.crosstable tr td.crosstable-bgc-r21-r26,.crosstable tr td.crosstable-bgc-r22-r25,.crosstable tr td.crosstable-bgc-r22-r26,.crosstable tr td.crosstable-bgc-r23-r25,.crosstable tr td.crosstable-bgc-r23-r26,.crosstable tr td.crosstable-bgc-r24-r26,.crosstable tr td.crosstable-bgc-r25-r28 {
+    background-color: #ffcccc
+}
+
+.crosstable tr td.crosstable-bgc-r2-r1,.crosstable tr td.crosstable-bgc-r3-r1,.crosstable tr td.crosstable-bgc-r3-r2,.crosstable tr td.crosstable-bgc-r4-r1,.crosstable tr td.crosstable-bgc-r4-r2,.crosstable tr td.crosstable-bgc-r4-r3,.crosstable tr td.crosstable-bgc-r5-r1,.crosstable tr td.crosstable-bgc-r5-r2,.crosstable tr td.crosstable-bgc-r5-r3,.crosstable tr td.crosstable-bgc-r5-r4,.crosstable tr td.crosstable-bgc-r6-r1,.crosstable tr td.crosstable-bgc-r6-r2,.crosstable tr td.crosstable-bgc-r6-r3,.crosstable tr td.crosstable-bgc-r6-r4,.crosstable tr td.crosstable-bgc-r6-r5,.crosstable tr td.crosstable-bgc-r7-r1,.crosstable tr td.crosstable-bgc-r7-r2,.crosstable tr td.crosstable-bgc-r7-r3,.crosstable tr td.crosstable-bgc-r7-r4,.crosstable tr td.crosstable-bgc-r7-r5,.crosstable tr td.crosstable-bgc-r7-r6,.crosstable tr td.crosstable-bgc-r8-r1,.crosstable tr td.crosstable-bgc-r8-r2,.crosstable tr td.crosstable-bgc-r8-r3,.crosstable tr td.crosstable-bgc-r8-r4,.crosstable tr td.crosstable-bgc-r8-r5,.crosstable tr td.crosstable-bgc-r8-r6,.crosstable tr td.crosstable-bgc-r8-r7,.crosstable tr td.crosstable-bgc-r9-r1,.crosstable tr td.crosstable-bgc-r9-r2,.crosstable tr td.crosstable-bgc-r9-r3,.crosstable tr td.crosstable-bgc-r9-r4,.crosstable tr td.crosstable-bgc-r9-r5,.crosstable tr td.crosstable-bgc-r9-r6,.crosstable tr td.crosstable-bgc-r9-r7,.crosstable tr td.crosstable-bgc-r9-r8,.crosstable tr td.crosstable-bgc-r10-r1,.crosstable tr td.crosstable-bgc-r10-r2,.crosstable tr td.crosstable-bgc-r10-r3,.crosstable tr td.crosstable-bgc-r10-r4,.crosstable tr td.crosstable-bgc-r10-r5,.crosstable tr td.crosstable-bgc-r10-r6,.crosstable tr td.crosstable-bgc-r10-r7,.crosstable tr td.crosstable-bgc-r10-r8,.crosstable tr td.crosstable-bgc-r10-r9,.crosstable tr td.crosstable-bgc-r11-r1,.crosstable tr td.crosstable-bgc-r11-r2,.crosstable tr td.crosstable-bgc-r11-r3,.crosstable tr td.crosstable-bgc-r11-r4,.crosstable tr td.crosstable-bgc-r11-r5,.crosstable tr td.crosstable-bgc-r11-r6,.crosstable tr td.crosstable-bgc-r11-r7,.crosstable tr td.crosstable-bgc-r11-r8,.crosstable tr td.crosstable-bgc-r11-r9,.crosstable tr td.crosstable-bgc-r11-r10,.crosstable tr td.crosstable-bgc-r12-r1,.crosstable tr td.crosstable-bgc-r12-r2,.crosstable tr td.crosstable-bgc-r12-r3,.crosstable tr td.crosstable-bgc-r12-r4,.crosstable tr td.crosstable-bgc-r12-r5,.crosstable tr td.crosstable-bgc-r12-r6,.crosstable tr td.crosstable-bgc-r12-r7,.crosstable tr td.crosstable-bgc-r12-r8,.crosstable tr td.crosstable-bgc-r12-r9,.crosstable tr td.crosstable-bgc-r12-r10,.crosstable tr td.crosstable-bgc-r12-r11,.crosstable tr td.crosstable-bgc-r13-r1,.crosstable tr td.crosstable-bgc-r13-r2,.crosstable tr td.crosstable-bgc-r13-r3,.crosstable tr td.crosstable-bgc-r13-r4,.crosstable tr td.crosstable-bgc-r13-r5,.crosstable tr td.crosstable-bgc-r13-r6,.crosstable tr td.crosstable-bgc-r13-r7,.crosstable tr td.crosstable-bgc-r13-r8,.crosstable tr td.crosstable-bgc-r13-r9,.crosstable tr td.crosstable-bgc-r13-r10,.crosstable tr td.crosstable-bgc-r13-r11,.crosstable tr td.crosstable-bgc-r13-r12,.crosstable tr td.crosstable-bgc-r14-r1,.crosstable tr td.crosstable-bgc-r14-r2,.crosstable tr td.crosstable-bgc-r14-r3,.crosstable tr td.crosstable-bgc-r14-r4,.crosstable tr td.crosstable-bgc-r14-r5,.crosstable tr td.crosstable-bgc-r14-r6,.crosstable tr td.crosstable-bgc-r14-r7,.crosstable tr td.crosstable-bgc-r14-r8,.crosstable tr td.crosstable-bgc-r14-r9,.crosstable tr td.crosstable-bgc-r14-r10,.crosstable tr td.crosstable-bgc-r14-r11,.crosstable tr td.crosstable-bgc-r14-r12,.crosstable tr td.crosstable-bgc-r14-r13,.crosstable tr td.crosstable-bgc-r15-r1,.crosstable tr td.crosstable-bgc-r15-r2,.crosstable tr td.crosstable-bgc-r15-r3,.crosstable tr td.crosstable-bgc-r15-r4,.crosstable tr td.crosstable-bgc-r15-r5,.crosstable tr td.crosstable-bgc-r15-r6,.crosstable tr td.crosstable-bgc-r15-r7,.crosstable tr td.crosstable-bgc-r15-r8,.crosstable tr td.crosstable-bgc-r15-r9,.crosstable tr td.crosstable-bgc-r15-r10,.crosstable tr td.crosstable-bgc-r15-r11,.crosstable tr td.crosstable-bgc-r15-r12,.crosstable tr td.crosstable-bgc-r15-r13,.crosstable tr td.crosstable-bgc-r15-r14,.crosstable tr td.crosstable-bgc-r16-r1,.crosstable tr td.crosstable-bgc-r16-r2,.crosstable tr td.crosstable-bgc-r16-r3,.crosstable tr td.crosstable-bgc-r16-r4,.crosstable tr td.crosstable-bgc-r16-r5,.crosstable tr td.crosstable-bgc-r16-r6,.crosstable tr td.crosstable-bgc-r16-r7,.crosstable tr td.crosstable-bgc-r16-r8,.crosstable tr td.crosstable-bgc-r16-r9,.crosstable tr td.crosstable-bgc-r16-r10,.crosstable tr td.crosstable-bgc-r16-r11,.crosstable tr td.crosstable-bgc-r16-r12,.crosstable tr td.crosstable-bgc-r16-r13,.crosstable tr td.crosstable-bgc-r16-r14,.crosstable tr td.crosstable-bgc-r16-r15,.crosstable tr td.crosstable-bgc-r1-r0,.crosstable tr td.crosstable-bgc-r2-r0,.crosstable tr td.crosstable-bgc-r3-r0,.crosstable tr td.crosstable-bgc-r4-r0,.crosstable tr td.crosstable-bgc-r5-r0,.crosstable tr td.crosstable-bgc-r6-r0,.crosstable tr td.crosstable-bgc-r7-r0,.crosstable tr td.crosstable-bgc-r8-r0,.crosstable tr td.crosstable-bgc-r9-r0,.crosstable tr td.crosstable-bgc-r10-r0,.crosstable tr td.crosstable-bgc-r11-r0,.crosstable tr td.crosstable-bgc-r12-r0,.crosstable tr td.crosstable-bgc-r13-r0,.crosstable tr td.crosstable-bgc-r14-r0,.crosstable tr td.crosstable-bgc-r15-r0,.crosstable tr td.crosstable-bgc-r16-r0,.crosstable tr td.crosstable-bgc-r19-r15,.crosstable tr td.crosstable-bgc-r19-r16,.crosstable tr td.crosstable-bgc-r19-r17,.crosstable tr td.crosstable-bgc-r22-r18,.crosstable tr td.crosstable-bgc-r22-r19,.crosstable tr td.crosstable-bgc-r22-r20,.crosstable tr td.crosstable-bgc-r25-r21,.crosstable tr td.crosstable-bgc-r25-r22,.crosstable tr td.crosstable-bgc-r25-r23,.crosstable tr td.crosstable-bgc-r21-r15,.crosstable tr td.crosstable-bgc-r21-r16,.crosstable tr td.crosstable-bgc-r21-r17,.crosstable tr td.crosstable-bgc-r21-r18,.crosstable tr td.crosstable-bgc-r21-r19,.crosstable tr td.crosstable-bgc-r26-r20,.crosstable tr td.crosstable-bgc-r26-r21,.crosstable tr td.crosstable-bgc-r26-r22,.crosstable tr td.crosstable-bgc-r26-r23,.crosstable tr td.crosstable-bgc-r26-r24 {
+    background-color: #ccffcc
+}
+
+.crosstable tr td.crosstable-bgc-rW-rFF,.crosstable tr td.crosstable-bgc-rw-r {
+    background-color: #ccffcc
+}
+
+.crosstable tr td.crosstable-bgc-rFF-rW,.crosstable tr td.crosstable-bgc-r-rw {
+    background-color: #ffcccc
+}
+
+.crosstable tr td.crosstable-bgc-rw-r b {
+    display: none
+}
+
+.crosstable tr td.crosstable-bgc-r-rw b {
+    display: none
+}
+
+.crosstable tr td.crosstable-bgc-cross {
+    background-color: #f2f2f2
+}
+
+.crosstable .crosstable-bgc-span {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center
+}
+
+.crosstable .crosstable-tr {
+    height: 30px
+}
+
+.crosstable {
+    text-align: center;
+    margin: 0;
+    line-height: 14px
+}
+
+.crosstable th,.crosstable td {
+    padding: 1px
+}
+
+.crosstable .bracket-game .icon {
+    margin-top: 2px !important;
+    margin-right: -6px !important;
+    opacity: 0.6
+}
+
+div.tabs-static,div.tabs-dynamic {
+    overflow: hidden
+}
+
+div.tabs-dynamic > ul.nav-tabs {
+    margin-bottom: 0
+}
+
+div.tabs-dynamic > ul.nav-tabs > li:not(.active),div.tabs-static > ul.nav-tabs > li:not(.active) {
+    cursor: pointer
+}
+
+div.tabs-dynamic > ul.nav-tabs > li,div.tabs-static > ul.nav-tabs > li {
+    float: left;
+    border-width: 2px 2px 0 2px !important;
+    border-style: solid
+}
+
+div.tabs-dynamic > .nav-tabs > li > span > span > a,div.tabs-static > .nav-tabs > li > span > span > a {
+    margin-right: 0;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 0px 0px 0 0;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    outline: 0
+}
+
+div.tabs-dynamic > .nav-tabs > li > span > span > a:first-of-type,div.tabs-static > .nav-tabs > li > span > span > a:first-of-type {
+    border-width: 1px 0 1px 1px
+}
+
+div.tabs-dynamic > .nav-tabs > li > span > span > a:last-of-type,div.tabs-static > .nav-tabs > li > span > span > a:last-of-type {
+    border-width: 1px 1px 1px 0
+}
+
+div.tabs-dynamic > ul.nav-tabs > li .team-template-team-standard,div.tabs-static > ul.nav-tabs > li .team-template-team-standard {
+    white-space: nowrap
+}
+
+div.tabs-dynamic > ul.nav-tabs > li .team-template-team-standard > *,div.tabs-static > ul.nav-tabs > li .team-template-team-standard > * {
+    float: left
+}
+
+div.tabs-dynamic > ul.nav-tabs > li .team-template-image > *,div.tabs-static > ul.nav-tabs > li .team-template-image > * {
+    padding-right: 0
+}
+
+div.tabs-dynamic > ul.nav-tabs > li .team-template-text > *,div.tabs-static > ul.nav-tabs > li .team-template-text > * {
+    padding-left: 0
+}
+
+div.tabs-dynamic > ul.nav-tabs > li > a,div.tabs-static > ul.nav-tabs > li > a {
+    border: 1px solid transparent;
+    outline: 0
+}
+
+.nav-tabs > li > span > span > strong {
+    background-color: #ffffff;
+    display: block;
+    padding: 5px 10px;
+    position: relative
+}
+
+.nav-tabs > li > span > span > strong {
+    border: 1px solid transparent;
+    border-radius: 0;
+    line-height: 1.42857;
+    margin-right: 0;
+    outline: 0
+}
+
+.nav-tabs > li.active {
+    background-color: #ffffff
+}
+
+div.tabs-content {
+    border-width: 2px;
+    border-style: solid;
+    border-top: 0;
+    padding: 5px
+}
+
+div.tabs-content > div:not(.active) {
+    display: none
+}
+
+div.tabs-content > div {
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.tabs-portal .tabs-portal-content-wrapper {
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px
+}
+
+.tabs-portal .tabs-portal-content {
+    border-width: 2px;
+    border-style: solid;
+    background-color: #ffffff;
+    padding: 5px;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.tabs-portal > ul.tabs {
+    border: 0;
+    margin-bottom: 0px
+}
+
+.tabs-portal > ul.tabs > li {
+    border-bottom: 0;
+    font-size: 150%;
+    font-weight: bold
+}
+
+div.tabs-static-games > ul.nav-tabs > li {
+    float: right
+}
+
+div.tabs-static-games > ul.nav-tabs > li:first-of-type {
+    margin-right: 0
+}
+
+ul.nav-tabs li.game-64 {
+    background-color: #d5e5b6
+}
+
+ul.nav-tabs li.game-melee {
+    background-color: #b6e5c6
+}
+
+ul.nav-tabs li.game-brawl {
+    background-color: #b6d5e5
+}
+
+ul.nav-tabs li.game-pm {
+    background-color: #c6b6e5
+}
+
+ul.nav-tabs li.game-3ds {
+    background-color: #e5b6d5
+}
+
+ul.nav-tabs li.game-wiiu {
+    background-color: #e5c6b6
+}
+
+ul.nav-tabs li.game-none {
+    background-color: #dedede
+}
+
+table.prizepooltable:not(.collapsed) .prizepooltableshow,table.prizepooltable.collapsed .prizepooltablehide {
+    display: none
+}
+
+.prizepooltabletoggle {
+    cursor: pointer
+}
+
+.prizepooltable-col-player,.prizepooltable-col-team {
+    min-width: 150px
+}
+
+.prizepooltable-col-team {
+    padding-right: 10px !important
+}
+
+@media (max-width: 750px) {
+    .prizepooltable-col-team a:nth-child(2) {
+        display:none
+    }
+
+    .prizepooltable-col-team {
+        min-width: 65px;
+        padding-right: 0.2em !important
+    }
+}
+
+html.client-js .prizepooltable.collapsed[data-cutafter='1'] tr:nth-child(n+4),html.client-js .prizepooltable.collapsed[data-cutafter='2'] tr:nth-child(n+5),html.client-js .prizepooltable.collapsed[data-cutafter='3'] tr:nth-child(n+6),html.client-js .prizepooltable.collapsed[data-cutafter='4'] tr:nth-child(n+7),html.client-js .prizepooltable.collapsed[data-cutafter='5'] tr:nth-child(n+8),html.client-js .prizepooltable.collapsed[data-cutafter='6'] tr:nth-child(n+9),html.client-js .prizepooltable.collapsed[data-cutafter='7'] tr:nth-child(n+10),html.client-js .prizepooltable.collapsed[data-cutafter='8'] tr:nth-child(n+11),html.client-js .prizepooltable.collapsed[data-cutafter='9'] tr:nth-child(n+12),html.client-js .prizepooltable.collapsed[data-cutafter='10'] tr:nth-child(n+13),html.client-js .prizepooltable.collapsed[data-cutafter='11'] tr:nth-child(n+14),html.client-js .prizepooltable.collapsed[data-cutafter='12'] tr:nth-child(n+15),html.client-js .prizepooltable.collapsed[data-cutafter='13'] tr:nth-child(n+16),html.client-js .prizepooltable.collapsed[data-cutafter='14'] tr:nth-child(n+17),html.client-js .prizepooltable.collapsed[data-cutafter='15'] tr:nth-child(n+18),html.client-js .prizepooltable.collapsed[data-cutafter='16'] tr:nth-child(n+19),html.client-js .prizepooltable.collapsed[data-cutafter='17'] tr:nth-child(n+20),html.client-js .prizepooltable.collapsed[data-cutafter='18'] tr:nth-child(n+21),html.client-js .prizepooltable.collapsed[data-cutafter='19'] tr:nth-child(n+22),html.client-js .prizepooltable.collapsed[data-cutafter='20'] tr:nth-child(n+23),html.client-js .prizepooltable.collapsed[data-cutafter='21'] tr:nth-child(n+24),html.client-js .prizepooltable.collapsed[data-cutafter='22'] tr:nth-child(n+25),html.client-js .prizepooltable.collapsed[data-cutafter='23'] tr:nth-child(n+26),html.client-js .prizepooltable.collapsed[data-cutafter='24'] tr:nth-child(n+27),html.client-js .prizepooltable.collapsed[data-cutafter='25'] tr:nth-child(n+28),html.client-js .prizepooltable.collapsed[data-cutafter='26'] tr:nth-child(n+29),html.client-js .prizepooltable.collapsed[data-cutafter='27'] tr:nth-child(n+30),html.client-js .prizepooltable.collapsed[data-cutafter='28'] tr:nth-child(n+31),html.client-js .prizepooltable.collapsed[data-cutafter='29'] tr:nth-child(n+32),html.client-js .prizepooltable.collapsed[data-cutafter='30'] tr:nth-child(n+33),html.client-js .prizepooltable.collapsed[data-cutafter='31'] tr:nth-child(n+34),html.client-js .prizepooltable.collapsed[data-cutafter='32'] tr:nth-child(n+35) {
+    display: none
+}
+
+.prizepooltable tr.background-color-first-place {
+    background-color: #fdea9d
+}
+
+.prizepooltable tr.background-color-second-place {
+    background-color: #e0e0e0
+}
+
+.prizepooltable tr.background-color-third-place {
+    background-color: #e4bf91
+}
+
+.prizepooltable tr.background-color-fourth-place {
+    background-color: #fdc0a2
+}
+
+.prizepooltable tr.background-color-disqualified {
+    background-color: #c4c5d3
+}
+
+.prizepooltable tr.background-color-win {
+    background-color: #ccffcc
+}
+
+.prizepooltable tr.background-color-lose {
+    background-color: #ffcccc
+}
+
+.statstable {
+    text-align: center
+}
+
+.statstable .stats-map-row .stats-map-name {
+    text-align: left
+}
+
+.statstable .stats-tvz-4,.statstable .stats-zvp-4,.statstable .stats-pvt-4 {
+    text-align: right;
+    padding-right: 5px
+}
+
+div.NavFrame {
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #aaa;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 95%
+}
+
+div.NavFrame + div.NavFrame {
+    border-top-style: none;
+    border-top-style: hidden
+}
+
+div.NavPic {
+    background-color: #fff;
+    margin: 0;
+    padding: 2px;
+    float: left
+}
+
+div.NavFrame div.NavHead {
+    height: 1.6em;
+    font-weight: bold;
+    background-color: #ccf;
+    position: relative
+}
+
+div.NavFrame p,div.NavFrame div.NavContent,div.NavFrame div.NavContent p {
+    font-size: 100%
+}
+
+div.NavEnd {
+    margin: 0;
+    padding: 0;
+    line-height: 1px;
+    clear: both
+}
+
+a.NavToggle {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    font-weight: normal;
+    font-size: 90%
+}
+
+.NavFrame {
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.collapseButton {
+    float: right;
+    font-weight: normal;
+    text-align: right;
+    width: auto
+}
+
+span.collapseButton {
+    min-width: 40px
+}
+
+.collapseCenterFix {
+    padding-left: 40px
+}
+
+.divTable {
+    display: table;
+    width: auto;
+    background-color: #ffffff;
+    border-spacing: 2px;
+    border-collapse: collapse
+}
+
+.divRow {
+    display: table-row;
+    width: auto;
+    line-height: 1.42857143
+}
+
+.divHeaderRow {
+    line-height: 1.42857143;
+    font-weight: bold;
+    display: table-row
+}
+
+.divCell {
+    display: table-cell;
+    padding: 5px;
+    line-height: 1.42857143
+}
+
+.divRow > .divCell {
+    border-top: 1px solid #bbbbbb
+}
+
+.divTable > .divHeaderRow,.divTable.table-striped > .divRow:nth-child(2n+1) {
+    background-color: #f5f5f5
+}
+
+body.ns-2.ns-subject #bodyContent:before {
+    content: "This is a userpage. Userpages do not necessarily meet our guidelines for notability or fact-checking!";
+    padding: 5px;
+    margin-bottom: 20px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    display: block;
+    text-align: center;
+    border-left: 5px solid #ff0000;
+    font-size: 120%
+}
+
+body.ns-10.ns-subject[class*="page-Template_Team_"] #editform:before,body.ns-10.ns-subject[class*="page-Template_Team2_"] #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamShort_"] #editform:before,body.ns-10.ns-subject[class*="page-Template_Team2_"] #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamBracket_"] #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamIcon_"] #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamPart_"] #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamPage_"] #editform:before {
+    content: "You are currently editing a team template. Liquipedia has a nice tool to create them even faster at Special:CreateTeams which you really should check out!";
+    padding: 5px;
+    margin-bottom: 20px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    display: block;
+    text-align: center;
+    border-left: 5px solid #0000ff;
+    font-size: 120%
+}
+
+body.ns-10.ns-subject[class*="page-Template_Team_"] .mw-newarticletext ~ #editform:before,body.ns-10.ns-subject[class*="page-Template_Team2_"] .mw-newarticletext ~ #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamShort_"] .mw-newarticletext ~ #editform:before,body.ns-10.ns-subject[class*="page-Template_Team2_"] .mw-newarticletext ~ #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamBracket_"] .mw-newarticletext ~ #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamIcon_"] .mw-newarticletext ~ #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamPart_"] .mw-newarticletext ~ #editform:before,body.ns-10.ns-subject[class*="page-Template_TeamPage_"] .mw-newarticletext ~ #editform:before {
+    content: "You are currently creating a team template. Liquipedia has a nice tool to create them even faster at Special:CreateTeams which you really should check out!"
+}
+
+body.ns-0.ns-subject .mw-newarticletext ~ #editform:before {
+    content: "Be sure the new page meets our notability guidelines before adding it. Check the help portal in the contribute menu above for more information.";
+    padding: 5px;
+    margin-bottom: 20px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    display: block;
+    text-align: center;
+    border-left: 5px solid #0000ff;
+    font-size: 120%
+}
+
+.swisstable .swisstable-bgc-draw {
+    background-color: #ffffbb
+}
+
+.swisstable .swisstable-bgc-win {
+    background-color: #ccffcc
+}
+
+.swisstable .swisstable-bgc-lose {
+    background-color: #ffcccc
+}
+
+ol.hlist,ul.hlist,.hlist ol,.hlist ul {
+    margin: 0;
+    padding: 0
+}
+
+.hlist li {
+    margin: 0;
+    display: inline
+}
+
+.hlist li:after {
+    content: " · ";
+    font-weight: bold;
+    margin: 0 0.25em 0 0.3em
+}
+
+.hlist li:last-child:after {
+    content: none
+}
+
+table.navbox {
+    width: 100%;
+    margin: auto;
+    clear: both;
+    font-size: 95%;
+    text-align: center;
+    padding: 1px
+}
+
+table.navbox + table.navbox {
+    margin-top: -1px
+}
+
+ol + table.navbox,ul + table.navbox,div.reflist + table.navbox {
+    margin-top: 11px
+}
+
+.navbox-title,.navbox-abovebelow,table.navbox th {
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em
+}
+
+.navbox-group {
+    white-space: nowrap;
+    text-align: right;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em
+}
+
+.navbox,.navbox-subgroup {
+    background: #fdfdfd
+}
+
+.navbox-list {
+    border-color: #fdfdfd
+}
+
+.navbox-even {
+    background: #f7f7f7
+}
+
+.navbox-odd {
+    background: transparent
+}
+
+.navbox .collapseButton {
+    width: 6em
+}
+
+.navbox-navbar {
+    font-size: 95%;
+    font-weight: normal
+}
+
+.navbox .navbox-navbar {
+    font-size: 100%
+}
+
+@media (max-width: 600px) {
+    .navbox .image {
+        display:none
+    }
+}
+
+blockquote.quote {
+    font-style: italic;
+    overflow: hidden;
+    padding: 5px 60px;
+    position: relative;
+    max-width: 990px
+}
+
+blockquote.quote::before {
+    content: open-quote;
+    font-size: 5em;
+    position: absolute;
+    top: -30px;
+    left: 0px
+}
+
+blockquote.quote::after {
+    content: close-quote;
+    font-size: 5em;
+    position: absolute;
+    bottom: -70px;
+    right: 10px
+}
+
+blockquote.quote div.quote-source {
+    text-align: right
+}
+
+div.selectall-relative {
+    position: relative
+}
+
+textarea.selectall-duplicate {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: pre;
+    -moz-tab-size: 13;
+    tab-size: 13
+}
+
+.team-template-image {
+    vertical-align: 2px
+}
+
+.team-template-team-bracket > .team-template-text {
+    vertical-align: -1px;
+    margin-left: 10px
+}
+
+.team-template-team-part {
+    float: right
+}
+
+.bind-highlighting {
+    display: none
+}
+
+.team-template-image img {
+    width: 60px;
+    height: 25px;
+    image-rendering: -webkit-optimize-contrast
+}
+
+.tabs .team-template-image img {
+    width: 40px;
+    height: 17px
+}
+
+.team-template-team-bracket img {
+    width: 44px;
+    height: 18px
+}
+
+.timeline .team-template-team-standard {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block
+}
+
+.team-template-team-bracket {
+    white-space: nowrap
+}
+
+.team-template-team-bracket > .team-template-text {
+    display: inline-block;
+    width: calc(100% - 47px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle
+}
+
+.team-template-team-bracket > .team-template-text:empty {
+    display: none
+}
+
+.team-template-team-bracket > .team-template-image {
+    vertical-align: middle
+}
+
+.ambox-wrapper {
+    overflow: hidden
+}
+
+@media (max-width: 600px) {
+    .ambox-wrapper {
+        clear:both
+    }
+}
+
+.ambox {
+    margin: 0 auto 5px auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 250px;
+    border-width: 0px 0px 0px 10px;
+    padding: 4px;
+    border-style: solid;
+    overflow: hidden
+}
+
+.ambox-fa-icon {
+    font-size: 40px
+}
+
+.ambox-text {
+    padding: 5px
+}
+
+.ambox-blue {
+    border-color: #7e7ef3;
+    background-color: #ccccff
+}
+
+.ambox-green {
+    border-color: #77ce77;
+    background-color: #ccffcc
+}
+
+.ambox-red {
+    border-color: #f37e7e;
+    background-color: #ffcccc
+}
+
+.sitenotice {
+    border-width: 0px 0px 0px 10px;
+    border-style: solid
+}
+
+.sitenotice.sitenotice-blue {
+    border-color: #7e7ef3;
+    background-color: #ccccff;
+    padding: 10px
+}
+
+.sitenotice.sitenotice-green {
+    border-color: #77ce77;
+    background-color: #ccffcc;
+    padding: 10px
+}
+
+.sitenotice.sitenotice-red {
+    border-color: #f37e7e;
+    background-color: #ffcccc;
+    padding: 10px
+}
+
+.teamcard {
+    position: relative;
+    width: 200px
+}
+
+.teamcard > center {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.teamcard table.list,.teamcard table.logo {
+    height: 121px;
+    margin-top: 0;
+    width: 200px
+}
+
+.teamcard table.list {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    z-index: 2;
+    table-layout: fixed
+}
+
+@media (min-width: 601px) {
+    .teamcard.teamcard-opened table.list,.teamcard table.list:hover {
+        opacity:1;
+        filter: alpha(opacity=100);
+        background-color: rgba(249,249,249,0.95)
+    }
+}
+
+.teamcard table.logo td {
+    padding: 0
+}
+
+.teamcard table.list td,.teamcard table.list th {
+    padding: 2px
+}
+
+.teamcard table.list th {
+    width: 20px
+}
+
+.teamcard table.list td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.teamcard .teamcard-placement {
+    padding: 0 !important
+}
+
+.teamcard .teamcard-placement table.teamcard-placement-table {
+    width: 100%;
+    text-align: center;
+    height: 29px
+}
+
+.teamcard .teamcard-qualifier {
+    text-align: center;
+    font-weight: bold;
+    height: 25px
+}
+
+.teamcard .teamcard-preview {
+    text-align: center
+}
+
+@media (max-width: 600px) {
+    .teamcard:not(.teamcard-nomobile) table.logo {
+        width:100%
+    }
+
+    .teamcard:not(.teamcard-nomobile) table.logo img {
+        width: auto;
+        height: auto;
+        max-width: 90%;
+        max-height: 90%
+    }
+
+    .teamcard:not(.teamcard-nomobile) {
+        position: relative;
+        width: 100%
+    }
+
+    .teamcard:not(.teamcard-nomobile) .teamcard-inner {
+        position: relative
+    }
+
+    .teamcard:not(.teamcard-nomobile) table.logo div.center {
+        width: 40%
+    }
+
+    .teamcard:not(.teamcard-nomobile) table.list {
+        opacity: 1;
+        filter: alpha(opacity=1);
+        table-layout: fixed;
+        position: absolute;
+        top: 0px;
+        width: 60%;
+        left: 40%
+    }
+}
+
+.teamcard-toggle-button {
+    height: 40px
+}
+
+.teamcard-toggle-button::after {
+    content: " ";
+    display: block;
+    clear: left
+}
+
+.teamcard-toggle-button button {
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 120px
+}
+
+@media (max-width: 600px) {
+    .teamcard-toggle-button {
+        display:none
+    }
+}
+
+body.page-Main_Page h1.firstHeading,body.page-Main_Page_LiquiFlow h1.firstHeading,body.page-Main_Page #contentSub,body.page-Main_Page_LiquiFlow #contentSub {
+    display: none
+}
+
+div.main-page-banner .main-page-banner-bottom-row {
+    margin-bottom: 15px
+}
+
+@media (max-width: 339px) {
+    div.main-page-banner .main-page-banner-top-row {
+        font-size:200%
+    }
+
+    div.main-page-banner .main-page-banner-bottom-row {
+        font-size: 165%
+    }
+}
+
+@media (min-width: 340px) {
+    div.main-page-banner .main-page-banner-top-row {
+        font-size:210%
+    }
+
+    div.main-page-banner .main-page-banner-bottom-row {
+        font-size: 170%
+    }
+}
+
+@media (min-width: 360px) {
+    div.main-page-banner .main-page-banner-top-row {
+        font-size:225%
+    }
+
+    div.main-page-banner .main-page-banner-bottom-row {
+        font-size: 180%
+    }
+}
+
+@media (min-width: 375px) {
+    div.main-page-banner .main-page-banner-top-row {
+        font-size:235%
+    }
+}
+
+@media (min-width: 410px) {
+    div.main-page-banner .main-page-banner-top-row {
+        font-size:260%
+    }
+}
+
+#mw-content-text .row {
+    padding: 0 5px
+}
+
+#mw-content-text .row > [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.tournaments-list {
+    list-style-type: none;
+    margin: 0 !important
+}
+
+.tournaments-list-heading {
+    padding: 5px;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    display: block;
+    background-color: #f5f5f5;
+    border-top: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb
+}
+
+.tournaments-list-type-list {
+    margin-bottom: 15px !important;
+    margin-left: 0px !important;
+    list-style-type: none
+}
+
+.tournaments-list-dates {
+    float: right;
+    padding-right: 10px
+}
+
+.tournaments-list-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 120px);
+    display: inline-block;
+    margin-bottom: -5px;
+    padding-left: 35px
+}
+
+.tournaments-list-name > .league-icon-small-image {
+    margin-left: -25px
+}
+
+.tournaments-list-name img {
+    vertical-align: bottom;
+    height: 21px;
+    width: 21px
+}
+
+.divTable.mainpage-transfer.Ref .divCell.Empty,.mainpage-transfer .divCell.Empty {
+    width: 20px;
+    min-height: 20px
+}
+
+.mainpage-transfer .divCell.GameIcon,.mainpage-transfer .divCell.Icon,.mainpage-transfer .divTable.Ref .divCell.Icon {
+    width: 20px
+}
+
+.mainpage-transfer .divCell.Name {
+    text-align: left
+}
+
+.mainpage-transfer .divCell {
+    vertical-align: middle
+}
+
+.divTable.mainpage-transfer.Ref .divCell.Ref {
+    width: 28px
+}
+
+body.page-Main_Page .mainpage-transfer .divRow:nth-of-type(n + 17),body.page-Main_Page_LiquiFlow .mainpage-transfer .divRow:nth-of-type(n + 17) {
+    display: none
+}
+
+@media (max-width: 560px) {
+    .mainpage-transfer > div {
+        display:block;
+        position: relative;
+        border-top: 1px solid #bbbbbb;
+        border-bottom: 1px solid #bbbbbb;
+        text-align: center
+    }
+
+    .mainpage-transfer > div:not(:last-of-type) {
+        margin-bottom: 15px
+    }
+
+    .divTable.mainpage-transfer.Ref .divCell.Ref {
+        width: 42px;
+        text-align: right
+    }
+
+    .mainpage-transfer > div > div.Ref {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: none;
+        border: 0 !important
+    }
+
+    .mainpage-transfer > div > div.GameIcon {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        float: none;
+        border: 0 !important
+    }
+
+    .mainpage-transfer > div > div.Name {
+        display: inline-block;
+        float: none;
+        width: calc(100% - 125px) !important;
+        text-align: left;
+        border: 0 !important
+    }
+
+    .mainpage-transfer > div > div.Date {
+        display: block;
+        float: right;
+        margin-right: 36px;
+        border: 0 !important
+    }
+
+    .mainpage-transfer > div > div.OldTeam {
+        display: inline-block;
+        float: none;
+        width: 33.333333% !important;
+        border: 0 !important
+    }
+
+    .mainpage-transfer > div > div.Icon {
+        display: inline-block;
+        float: none;
+        width: 23.333333% !important;
+        border: 0 !important
+    }
+
+    .mainpage-transfer > div > div.NewTeam {
+        display: inline-block;
+        float: none;
+        width: 33.333333% !important;
+        border: 0 !important
+    }
+}
+
+.mainpage-transfer .mainpage-transfer-to-team {
+    background-color: #f0fff0 !important
+}
+
+.mainpage-transfer .mainpage-transfer-from-team {
+    background-color: #f9f0f2 !important
+}
+
+#this-day-facts {
+    overflow: hidden
+}
+
+#this-day-facts > h3:first-child {
+    margin-top: 0;
+    padding-top: 0
+}
+
+.infobox_matches_content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%
+}
+
+.infobox_matches_content .team-left,.infobox_matches_content .team-right {
+    width: 48%
+}
+
+.infobox_matches_content .team-left {
+    text-align: right
+}
+
+.infobox_matches_content .versus {
+    width: 4%
+}
+
+.infobox_matches_content a.hasStream {
+    background-position: right;
+    padding-left: 0px;
+    padding-right: 15px
+}
+
+.infobox_matches_content td.match-filler {
+    border-bottom: 1px solid #bbbbbb
+}
+
+span.countdown.match-countdown-countdown.EventIsLive {
+    color: #888888;
+    font-weight: bold
+}
+
+span.countdown.match-countdown-countdown {
+    font-size: 11px
+}
+
+.mainpage-editlink {
+    text-align: right;
+    padding: 0 1em
+}
+
+.top-ad {
+    padding-top: 0
+}
+
+body.page-Main_Page .rankingtable tr:nth-of-type(n + 7) {
+    display: none
+}
+
+.tournaments-list .filter-64 {
+    background-color: #d5e5b6
+}
+
+.tournaments-list .filter-melee {
+    background-color: #b6e5c6
+}
+
+.tournaments-list .filter-brawl {
+    background-color: #b6d5e5
+}
+
+.tournaments-list .filter-pm {
+    background-color: #c6b6e5
+}
+
+.tournaments-list .filter-wiiu {
+    background-color: #e5c6b6
+}
+
+.tournaments-list .filter-3ds {
+    background-color: #e5b6d5
+}
+
+#tournaments-list-filter-64,#tournaments-list-filter-melee,#tournaments-list-filter-brawl,#tournaments-list-filter-pm,#tournaments-list-filter-wiiu,#tournaments-list-filter-3ds {
+    display: none
+}
+
+label[for^=tournaments-list-filter-] {
+    cursor: pointer;
+    vertical-align: middle;
+    width: calc(100% / 6);
+    text-align: center;
+    padding: 10px 0;
+    margin: 0
+}
+
+label[for^=tournaments-list-filter-]:before {
+    padding: 5px
+}
+
+label[for=tournaments-list-filter-64] {
+    background-color: #d5e5b6
+}
+
+label[for=tournaments-list-filter-64]:before {
+    content: "64"
+}
+
+label[for=tournaments-list-filter-melee] {
+    background-color: #b6e5c6
+}
+
+label[for=tournaments-list-filter-melee]:before {
+    content: "Melee"
+}
+
+label[for=tournaments-list-filter-brawl] {
+    background-color: #b6d5e5
+}
+
+label[for=tournaments-list-filter-brawl]:before {
+    content: "Brawl"
+}
+
+label[for=tournaments-list-filter-pm] {
+    background-color: #c6b6e5
+}
+
+label[for=tournaments-list-filter-pm]:before {
+    content: "PM"
+}
+
+label[for=tournaments-list-filter-wiiu] {
+    background-color: #e5c6b6
+}
+
+label[for=tournaments-list-filter-wiiu]:before {
+    content: "Wii U"
+}
+
+label[for=tournaments-list-filter-3ds] {
+    background-color: #e5b6d5
+}
+
+label[for=tournaments-list-filter-3ds]:before {
+    content: "3DS"
+}
+
+.tournaments-list .filter-64,.tournaments-list .filter-melee,.tournaments-list .filter-brawl,.tournaments-list .filter-pm,.tournaments-list .filter-wiiu,.tournaments-list .filter-3ds,.tournaments-list .filter-none,#tournaments-list-filter-64:not(:checked) ~ label[for=tournaments-list-filter-64],#tournaments-list-filter-melee:not(:checked) ~ label[for=tournaments-list-filter-melee],#tournaments-list-filter-brawl:not(:checked) ~ label[for=tournaments-list-filter-brawl],#tournaments-list-filter-pm:not(:checked) ~ label[for=tournaments-list-filter-pm],#tournaments-list-filter-wiiu:not(:checked) ~ label[for=tournaments-list-filter-wiiu],#tournaments-list-filter-3ds:not(:checked) ~ label[for=tournaments-list-filter-3ds] {
+    opacity: .5;
+    transition: .5s
+}
+
+#tournaments-list-filter-64:not(:checked) ~ #tournaments-list-filter-melee:not(:checked) ~ #tournaments-list-filter-brawl:not(:checked) ~ #tournaments-list-filter-pm:not(:checked) ~ #tournaments-list-filter-wiiu:not(:checked) ~ #tournaments-list-filter-3ds:not(:checked) ~ .tournaments-list .filter-64,#tournaments-list-filter-64:not(:checked) ~ #tournaments-list-filter-melee:not(:checked) ~ #tournaments-list-filter-brawl:not(:checked) ~ #tournaments-list-filter-pm:not(:checked) ~ #tournaments-list-filter-wiiu:not(:checked) ~ #tournaments-list-filter-3ds:not(:checked) ~ .tournaments-list .filter-melee,#tournaments-list-filter-64:not(:checked) ~ #tournaments-list-filter-melee:not(:checked) ~ #tournaments-list-filter-brawl:not(:checked) ~ #tournaments-list-filter-pm:not(:checked) ~ #tournaments-list-filter-wiiu:not(:checked) ~ #tournaments-list-filter-3ds:not(:checked) ~ .tournaments-list .filter-brawl,#tournaments-list-filter-64:not(:checked) ~ #tournaments-list-filter-melee:not(:checked) ~ #tournaments-list-filter-brawl:not(:checked) ~ #tournaments-list-filter-pm:not(:checked) ~ #tournaments-list-filter-wiiu:not(:checked) ~ #tournaments-list-filter-3ds:not(:checked) ~ .tournaments-list .filter-pm,#tournaments-list-filter-64:not(:checked) ~ #tournaments-list-filter-melee:not(:checked) ~ #tournaments-list-filter-brawl:not(:checked) ~ #tournaments-list-filter-pm:not(:checked) ~ #tournaments-list-filter-wiiu:not(:checked) ~ #tournaments-list-filter-3ds:not(:checked) ~ .tournaments-list .filter-wiiu,#tournaments-list-filter-64:not(:checked) ~ #tournaments-list-filter-melee:not(:checked) ~ #tournaments-list-filter-brawl:not(:checked) ~ #tournaments-list-filter-pm:not(:checked) ~ #tournaments-list-filter-wiiu:not(:checked) ~ #tournaments-list-filter-3ds:not(:checked) ~ .tournaments-list .filter-none,#tournaments-list-filter-64:checked ~ .tournaments-list .filter-64,#tournaments-list-filter-melee:checked ~ .tournaments-list .filter-melee,#tournaments-list-filter-brawl:checked ~ .tournaments-list .filter-brawl,#tournaments-list-filter-pm:checked ~ .tournaments-list .filter-pm,#tournaments-list-filter-wiiu:checked ~ .tournaments-list .filter-wiiu,#tournaments-list-filter-3ds:checked ~ .tournaments-list .filter-3ds,#tournaments-list-filter-64:not(:checked) ~ #tournaments-list-filter-melee:not(:checked) ~ #tournaments-list-filter-brawl:not(:checked) ~ #tournaments-list-filter-pm:not(:checked) ~ #tournaments-list-filter-wiiu:not(:checked) ~ #tournaments-list-filter-3ds:not(:checked) ~ label[for^=tournaments-list-filter-],#tournaments-list-filter-64:checked ~ label[for=tournaments-list-filter-64],#tournaments-list-filter-melee:checked ~ label[for=tournaments-list-filter-melee],#tournaments-list-filter-brawl:checked ~ label[for=tournaments-list-filter-brawl],#tournaments-list-filter-pm:checked ~ label[for=tournaments-list-filter-pm],#tournaments-list-filter-wiiu:checked ~ label[for=tournaments-list-filter-wiiu],#tournaments-list-filter-3ds:checked ~ label[for=tournaments-list-filter-3ds] {
+    opacity: 1;
+    transition: .5s
+}
+
+.lp-icon {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    background-image: url(//wiki.teamliquid.net/commons/images/7/77/InfoboxIcon_Alert.png);
+    background-size: 32px 64px;
+    background-position: 0 -32px
+}
+
+.lp-icon.lp-icon-25 {
+    width: 25px;
+    height: 25px;
+    background-size: 25px 50px;
+    background-position: 0 -25px
+}
+
+.lp-icon.lp-icon-50 {
+    width: 50px;
+    height: 50px;
+    background-size: 50px 100px;
+    background-position: 0 -50px
+}
+
+.lp-icon.lp-icon-64 {
+    width: 64px;
+    height: 64px;
+    background-size: 64px 128px;
+    background-position: 0 -64px
+}
+
+.lp-icon.lp-icon-100 {
+    width: 100px;
+    height: 100px;
+    background-size: 100px 200px;
+    background-position: 0 -100px
+}
+
+.lp-icon.lp-icon-128 {
+    width: 128px;
+    height: 128px;
+    background-size: 128px 256px;
+    background-position: 0 -128px
+}
+
+.lp-icon.lp-icon-256 {
+    width: 256px;
+    height: 256px;
+    background-size: 256px 512px;
+    background-position: 0 -256px
+}
+
+.lp-icon:hover {
+    background-position: 0 0
+}
+
+.lp-icon.lp-5ewin {
+    background-image: url(//wiki.teamliquid.net/commons/images/c/cf/InfoboxIcon_5Ewin.png)
+}
+
+.lp-icon.lp-abios {
+    background-image: url(//wiki.teamliquid.net/commons/images/2/21/InfoboxIcon_Abios.png)
+}
+
+.lp-icon.lp-afreeca {
+    background-image: url(//wiki.teamliquid.net/commons/images/7/7c/InfoboxIcon_Afreeca.png)
+}
+
+.lp-icon.lp-aligulac {
+    background-image: url(//wiki.teamliquid.net/commons/images/7/74/InfoboxIcon_Aligulac.png)
+}
+
+.lp-icon.lp-ask-fm {
+    background-image: url(//wiki.teamliquid.net/commons/images/b/b8/InfoboxIcon_AskFM.png)
+}
+
+.lp-icon.lp-azubu {
+    background-image: url(//wiki.teamliquid.net/commons/images/6/62/InfoboxIcon_Azubu.png)
+}
+
+.lp-icon.lp-b5csgo {
+    background-image: url(//wiki.teamliquid.net/commons/images/5/52/InfoboxIcon_B5csgo.png)
+}
+
+.lp-icon.lp-binary-beast {
+    background-image: url(//wiki.teamliquid.net/commons/images/a/af/InfoboxIcon_BinaryBeast.png)
+}
+
+.lp-icon.lp-bracket {
+    background-image: url(//wiki.teamliquid.net/commons/images/d/d5/InfoboxIcon_Bracket.png)
+}
+
+.lp-icon.lp-cafe-daum {
+    background-image: url(//wiki.teamliquid.net/commons/images/c/c9/InfoboxIcon_Daum.png)
+}
+
+.lp-icon.lp-challonge {
+    background-image: url(//wiki.teamliquid.net/commons/images/c/cd/InfoboxIcon_Challonge.png)
+}
+
+.lp-icon.lp-cybergamer {
+    background-image: url(//wiki.teamliquid.net/commons/images/4/4e/InfoboxIcon_CyberGamer.png)
+}
+
+.lp-icon.lp-datdota {
+    background-image: url(//wiki.teamliquid.net/commons/images/2/24/InfoboxIcon_Datdota.png)
+}
+
+.lp-icon.lp-discord {
+    background-image: url(//wiki.teamliquid.net/commons/images/c/c6/InfoboxIcon_Discord.png)
+}
+
+.lp-icon.lp-dotabuff {
+    background-image: url(//wiki.teamliquid.net/commons/images/9/90/InfoboxIcon_Dotabuff.png)
+}
+
+.lp-icon.lp-douyutv {
+    background-image: url(//wiki.teamliquid.net/commons/images/b/bc/InfoboxIcon_DouyuTV.png)
+}
+
+.lp-icon.lp-etf2l {
+    background-image: url(//wiki.teamliquid.net/commons/images/6/61/InfoboxIcon_ETF2L.png)
+}
+
+.lp-icon.lp-email {
+    background-image: url(//wiki.teamliquid.net/commons/images/2/2f/InfoboxIcon_Email.png)
+}
+
+.lp-icon.lp-esea {
+    background-image: url(//wiki.teamliquid.net/commons/images/9/99/InfoboxIcon_ESEA.png)
+}
+
+.lp-icon.lp-esl {
+    background-image: url(//wiki.teamliquid.net/commons/images/4/44/InfoboxIcon_ESL.png)
+}
+
+.lp-icon.lp-facebook {
+    background-image: url(//wiki.teamliquid.net/commons/images/1/1e/InfoboxIcon_Facebook.png)
+}
+
+.lp-icon.lp-faceit {
+    background-image: url(//wiki.teamliquid.net/commons/images/e/e6/InfoboxIcon_FACEIT.png)
+}
+
+.lp-icon.lp-fanclub {
+    background-image: url(//wiki.teamliquid.net/commons/images/f/fe/InfoboxIcon_TLFanPage.png)
+}
+
+.lp-icon.lp-github {
+    background-image: url(//wiki.teamliquid.net/commons/images/f/fc/InfoboxIcon_GitHub.png)
+}
+
+.lp-icon.lp-google-plus {
+    background-image: url(//wiki.teamliquid.net/commons/images/4/40/InfoboxIcon_Google%2B.png)
+}
+
+.lp-icon.lp-gosugamers {
+    background-image: url(//wiki.teamliquid.net/commons/images/f/f0/InfoboxIcon_GosuGamers.png)
+}
+
+.lp-icon.lp-hitbox {
+    background-image: url(//wiki.teamliquid.net/commons/images/b/b6/InfoboxIcon_HitboxTV.png)
+}
+
+.lp-icon.lp-home {
+    background-image: url(//wiki.teamliquid.net/commons/images/2/2f/InfoboxIcon_Website.png)
+}
+
+.lp-icon.lp-huomaotv {
+    background-image: url(//wiki.teamliquid.net/commons/images/4/46/InfoboxIcon_HuomaoTV.png)
+}
+
+.lp-icon.lp-huyatv {
+    background-image: url(//wiki.teamliquid.net/commons/images/0/05/InfoboxIcon_HuyaTV.png)
+}
+
+.lp-icon.lp-iccup {
+    background-image: url(//wiki.teamliquid.net/commons/images/2/2c/InfoboxIcon_ICCUP.png)
+}
+
+.lp-icon.lp-instagram {
+    background-image: url(//wiki.teamliquid.net/commons/images/7/7d/InfoboxIcon_Instagram.png)
+}
+
+.lp-icon.lp-masteroverwatch {
+    background-image: url(//wiki.teamliquid.net/commons/images/6/60/InfoboxIcon_MasterOverwatch.png)
+}
+
+.lp-icon.lp-music {
+    background-image: url(//wiki.teamliquid.net/commons/images/3/37/InfoboxIcon_Music.png)
+}
+
+.lp-icon.lp-niconico {
+    background-image: url(//wiki.teamliquid.net/commons/images/b/bf/InfoboxIcon_Niconico.png)
+}
+
+.lp-icon.lp-pandatv {
+    background-image: url(//wiki.teamliquid.net/commons/images/d/d3/InfoboxIcon_PandaTV.png)
+}
+
+.lp-icon.lp-reddit {
+    background-image: url(//wiki.teamliquid.net/commons/images/5/59/InfoboxIcon_Reddit.png)
+}
+
+.lp-icon.lp-rules {
+    background-image: url(//wiki.teamliquid.net/commons/images/d/d0/InfoboxIcon_Rules.png)
+}
+
+.lp-icon.lp-skgaming {
+    background-image: url(//wiki.teamliquid.net/commons/images/0/01/InfoboxIcon_SK.png)
+}
+
+.lp-icon.lp-skype {
+    background-image: url(//wiki.teamliquid.net/commons/images/2/29/InfoboxIcon_Skype.png)
+}
+
+.lp-icon.lp-smashboards {
+    background-image: url(//wiki.teamliquid.net/commons/images/a/aa/InfoboxIcon_SmashBoards.png)
+}
+
+.lp-icon.lp-smashcast {
+    background-image: url(//wiki.teamliquid.net/commons/images/d/db/InfoboxIcon_Smashcast.png)
+}
+
+.lp-icon.lp-smash-gg {
+    background-image: url(//wiki.teamliquid.net/commons/images/3/3c/InfoboxIcon_SmashGG.png)
+}
+
+.lp-icon.lp-snapchat {
+    background-image: url(//wiki.teamliquid.net/commons/images/f/fc/InfoboxIcon_Snapchat.png)
+}
+
+.lp-icon.lp-steam {
+    background-image: url(//wiki.teamliquid.net/commons/images/d/d0/InfoboxIcon_Steam.png)
+}
+
+.lp-icon.lp-stream {
+    background-image: url(//wiki.teamliquid.net/commons/images/c/c2/InfoboxIcon_Stream.png)
+}
+
+.lp-icon.lp-tencent {
+    background-image: url(//wiki.teamliquid.net/commons/images/4/42/InfoboxIcon_Tencent.png)
+}
+
+.lp-icon.lp-tftv {
+    background-image: url(//wiki.teamliquid.net/commons/images/2/2b/InfoboxIcon_tftv.png)
+}
+
+.lp-icon.lp-tlpd-hots {
+    background-image: url(//wiki.teamliquid.net/commons/images/e/e3/InfoboxIcon_TLPDHoTS.png)
+}
+
+.lp-icon.lp-tlpd {
+    background-image: url(//wiki.teamliquid.net/commons/images/0/07/InfoboxIcon_TLPDInt.png)
+}
+
+.lp-icon.lp-tlpd-wol {
+    background-image: url(//wiki.teamliquid.net/commons/images/0/07/InfoboxIcon_TLPDInt.png)
+}
+
+.lp-icon.lp-tlpd-wol-korea {
+    background-image: url(//wiki.teamliquid.net/commons/images/7/78/InfoboxIcon_TLPDKor.png)
+}
+
+.lp-icon.lp-tlpd-sospa {
+    background-image: url(//wiki.teamliquid.net/commons/images/9/9d/InfoboxIcon_TLPDSonic.png)
+}
+
+.lp-icon.lp-tlprofile {
+    background-image: url(//wiki.teamliquid.net/commons/images/f/f3/InfoboxIcon_TLProfile.png)
+}
+
+.lp-icon.lp-tlstream {
+    background-image: url(//wiki.teamliquid.net/commons/images/b/b3/InfoboxIcon_TLStream.png)
+}
+
+.lp-icon.lp-toornament {
+    background-image: url(//wiki.teamliquid.net/commons/images/c/cb/InfoboxIcon_Toornament.png)
+}
+
+.lp-icon.lp-tournament {
+    background-image: url(//wiki.teamliquid.net/commons/images/a/a8/InfoboxIcon_Trophy.png)
+}
+
+.lp-icon.lp-twitch {
+    background-image: url(//wiki.teamliquid.net/commons/images/6/61/InfoboxIcon_Twitch.png)
+}
+
+.lp-icon.lp-twitter {
+    background-image: url(//wiki.teamliquid.net/commons/images/1/19/InfoboxIcon_Twitter.png)
+}
+
+.lp-icon.lp-vk {
+    background-image: url(//wiki.teamliquid.net/commons/images/d/d7/InfoboxIcon_VK.png)
+}
+
+.lp-icon.lp-vkontakte {
+    background-image: url(//wiki.teamliquid.net/commons/images/d/d7/InfoboxIcon_VK.png)
+}
+
+.lp-icon.lp-weibo {
+    background-image: url(//wiki.teamliquid.net/commons/images/9/92/InfoboxIcon_Weibo.png)
+}
+
+.lp-icon.lp-youku {
+    background-image: url(//wiki.teamliquid.net/commons/images/8/8e/InfoboxIcon_Youku.png)
+}
+
+.lp-icon.lp-youtube {
+    background-image: url(//wiki.teamliquid.net/commons/images/6/6c/InfoboxIcon_YouTube.png)
+}
+
+.lp-icon.lp-zhangyutv {
+    background-image: url(//wiki.teamliquid.net/commons/images/c/cf/InfoboxIcon_ZhangyuTV.png)
+}
+
+.LiquipediaLinks {
+    float: right;
+    display: none
+}
+
+.liquipedia-links {
+    display: none
+}
+
+.menu-italic {
+    font-style: italic
+}
+
+.liquipedia-links-badge {
+    position: absolute;
+    top: 3px;
+    padding: 2px 4px;
+    right: 3px
+}
+
+.liquipedia-links-badge-mobile {
+    position: relative;
+    top: -5px;
+    padding: 2px 4px;
+    left: 0px;
+    margin-right: 3px
+}
+
+@media (min-width: 601px) {
+    .template-box {
+        display:inline-block;
+        vertical-align: top;
+        margin: 0 0 0 0;
+        box-sizing: content-box;
+        max-width: 100%
+    }
+
+    .template-box > * {
+        box-sizing: border-box
+    }
+}
+
+@media (max-width: 600px) {
+    .template-box {
+        padding-right:0 !important
+    }
+}
+
+.th-mono {
+    font-family: 'Droid Sans Mono',monospace;
+    letter-spacing: -1.4px
+}
+
+#mw-content-text .faketoc {
+    display: none
+}
+
+#sidebar-toc .row,#scroll-wrapper-toc .row {
+    margin: 0
+}
+
+#sidebar-toc .row > [class*="col-"],#scroll-wrapper-toc .row > [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+#scroll-wrapper-toc .liquipedia-custom-icon-box {
+    font-size: 51px !important
+}
+
+.participants-table-scroller {
+    overflow: auto
+}
+
+.participants-table .participants-row .participants-cell {
+    width: 200px
+}
+
+.participants-table-buttons::after {
+    clear: both;
+    content: " ";
+    display: block
+}
+
+.participants-table-buttons {
+    display: none;
+    font-size: 200%
+}
+
+.participants-table-button-left {
+    float: left;
+    cursor: pointer
+}
+
+.participants-table-button-right {
+    float: right;
+    cursor: pointer
+}
+
+.participants-table-button-left.inactive,.participants-table-button-right.inactive {
+    opacity: 0.5;
+    cursor: initial
+}
+
+@media (max-width: 600px) {
+    .participants-table .participants-row .participants-cell {
+        min-width:200px
+    }
+
+    .participants-table-columns-2 .participants-row .participants-cell {
+        width: 50%
+    }
+
+    .participants-table-columns-3 .participants-row .participants-cell {
+        width: 33%
+    }
+
+    .participants-table-columns-4 .participants-row .participants-cell {
+        width: 25%
+    }
+
+    .participants-table-columns-2 {
+        width: 180% !important
+    }
+
+    .participants-table-columns-3 {
+        width: 270% !important
+    }
+
+    .participants-table-columns-4 {
+        width: 360% !important
+    }
+
+    .participants-table-buttons {
+        display: block
+    }
+}
+
+@media (max-width: 767px) {
+    .prizepooltable {
+        width:100%
+    }
+}
+
+.infobox-upcoming-ongoing-matches {
+    width: 100%
+}
+
+@media (min-width: 601px) {
+    .infobox-upcoming-ongoing-matches {
+        float:right;
+        clear: right;
+        max-width: 300px;
+        margin: 0 0 10px 10px
+    }
+}
+
+.infobox-upcoming-ongoing-matches .infobox-upcoming-ongoing-matches-header {
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px
+}
+
+.league-icon-small-image img {
+    max-width: 25px;
+    max-height: 25px;
+    image-rendering: -webkit-optimize-contrast
+}
+
+.wiki-warcraft .race-icon-small img {
+    width: 19px;
+    height: 19px
+}
+
+.timeline {
+    border: 1px solid #dddddd;
+    vertical-align: middle
+}
+
+.timeline-inner {
+    overflow: hidden
+}
+
+.timeline-heading {
+    font-size: 200%;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #dddddd
+}
+
+.timeline-row {
+    vertical-align: middle
+}
+
+.timeline-row:nth-of-type(2n) {
+    background-color: #eeeeee
+}
+
+.timeline-row > div {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    height: 35px;
+    padding: 4px
+}
+
+.timeline-row > div:nth-of-type(1) {
+    width: 150px;
+    line-height: 27px;
+    font-weight: bold
+}
+
+.timeline-row > div:nth-of-type(2) {
+    width: calc(100% - 150px)
+}
+
+.timeline-period {
+    position: absolute;
+    top: 5px;
+    height: 25px;
+    background-color: #bbbbbb
+}
+
+.timeline-lines {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px
+}
+
+.timeline-line {
+    width: 0;
+    border-left: 1px solid #333333;
+    opacity: .5;
+    height: 5000px;
+    margin-top: -5000px;
+    pointer-events: none
+}
+
+.timeline-footer {
+    display: flex;
+    justify-content: space-between;
+    height: 92px;
+    padding-left: 150px;
+    border-top: 1px solid #dddddd
+}
+
+.timeline-footer-date {
+    width: 24px
+}
+
+.timeline-footer-date-inner {
+    padding: 4px;
+    transform: rotate(90deg);
+    margin-top: 0px
+}
+
+.progress {
+    border-radius: 5px;
+    width: 100%;
+    height: 24px;
+    border: 1px solid #bbbbbb;
+    position: relative;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.progress > div.bar {
+    height: 22px;
+    border-radius: 4px;
+    float: left;
+    line-height: 17px
+}
+
+.progress > div.bar.bg-color {
+    background-color: #e5b6c0
+}
+
+.progress > div.bar-text {
+    height: 22px;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.progress > div.bar-text.bar-text-left {
+    text-align: left;
+    padding-left: 5px
+}
+
+.progress > div.bar-text.bar-text-right {
+    text-align: right;
+    padding-right: 5px
+}
+
+.spellcard-wrapper {
+    border-width: 2px 0;
+    border-style: solid;
+    padding: 10px 0;
+    max-width: 700px
+}
+
+.spellcard {
+    background-color: #eeeeee
+}
+
+.spellcard-description {
+    clear: left;
+    border-width: 2px 0;
+    border-style: solid
+}
+
+.spellcard-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%
+}
+
+.spellcard-image {
+    float: left;
+    border: 2px solid black;
+    position: relative;
+    margin: 5px 5px 0 5px
+}
+
+.spellcard-infos {
+    float: left;
+    width: calc(100% - 146px)
+}
+
+@media (max-width: 500px) {
+    .spellcard-infos {
+        float:none;
+        width: 100%
+    }
+}
+
+.spellcard-info {
+    width: 33.33333333333%;
+    min-width: 158px;
+    display: block;
+    float: left;
+    clear: right;
+    font-size: 90%;
+    padding-left: 2px
+}
+
+.spellcard-content-lower {
+    clear: left
+}
+
+.spellcard-technicstable {
+    float: left;
+    margin: 10px 5px 5px 5px
+}
+
+.spellcard-infotable {
+    vertical-align: top;
+    margin: 10px 5px 5px 5px
+}
+
+.spellcard-infotable th {
+    text-align: right;
+    padding-right: 10px;
+    vertical-align: top
+}
+
+.spellcard-infotable td {
+    vertical-align: top
+}
+
+.spellcard-weakness {
+    border-width: 1px 0;
+    border-style: solid;
+    margin: 0 5px;
+    padding: 3px 0;
+    clear: both
+}
+
+.spellcard-lore {
+    padding-bottom: 5px;
+    margin: 5px 10px 0 10px;
+    clear: both
+}
+
+.afspinner {
+    animation-duration: 10s;
+    animation-name: afspinnerkfs;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+@keyframes afspinnerkfs {
+    from {
+        transform: rotate3D(0,1,0,0deg)
+    }
+
+    to {
+        transform: rotate3D(0,1,0,360deg)
+    }
+}
+
+.toclimit-2 .toclevel-1 ul,.toclimit-3 .toclevel-2 ul,.toclimit-4 .toclevel-3 ul,.toclimit-5 .toclevel-4 ul,.toclimit-6 .toclevel-5 ul,.toclimit-7 .toclevel-6 ul {
+    display: none !important
+}
+
+ol + table.toc,ul + table.toc {
+    margin-top: 11px
+}
+
+.bold-white-text,td.bold-white-text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px rgba(64,64,64,0.4),1px -1px rgba(64,64,64,0.4),-1px -1px rgba(64,64,64,0.4),-1px 1px rgba(64,64,64,0.4)
+}
+
+.bold-white-text b {
+    font-weight: 700
+}
+
+.valvepremier-highlighted,.valvemajor-highlighted {
+    background-color: #ffffcc !important
+}
+
+.mw-content-ltr ol,.mw-content-rtl .mw-content-ltr ol {
+    margin-left: 1.6em !important
+}
+
+.broadcast-talent-partner-list {
+    margin-left: -0.5em;
+    text-align: left
+}
+
+.broadcast-talent-partner-list-frame {
+    border: none !important
+}
+
+.tournament-image-link {
+    text-align: center;
+    display: inline-block;
+    margin: 0 3em 4em
+}
+
+body.skin-liquiflow .hide-in-liquiflow,body:not(.skin-liquiflow) .hide-in-not-liquiflow {
+    display: none
+}
+
+.creep-spot img {
+    cursor: pointer
+}
+
+.creep-spot-popup {
+    display: none
+}
+
+html.client-js .collapsible.collapsed.newcollapsible > tbody > tr:nth-child(n+2),html.client-js .collapsible.collapsed.newcollapsible > tr:nth-child(n+2) {
+    display: none
+}
+
+.content-ad {
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+h1 + .content-ad,h2 + .content-ad,h3 + .content-ad,h4 + .content-ad,h5 + .content-ad,h6 + .content-ad {
+    margin-top: 0
+}

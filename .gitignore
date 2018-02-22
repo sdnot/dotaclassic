@@ -1,0 +1,9 @@
+node_modules
+build
+.next
+servers
+.vscode
+lang/.messages
+lang/en.json
+package-lock.json
+.npmrc
